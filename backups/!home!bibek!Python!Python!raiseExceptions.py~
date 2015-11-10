@@ -1,0 +1,17 @@
+
+# l=[]
+# l.append(try raw_input('enter the number in the list:'))
+l=[1,1,3,3,5,7]
+def findAnEven(l):
+    '''assumes l to be a list of integers. Returns the first even number in l
+    Raises ValueError if l doesn not contain an even number.'''
+    c=0
+    for each in l:
+        if each%2==0:
+            c=1
+            print  each
+            break
+    if not c:
+        raise ValueError('No even numbers in the list.')
+
+findAnEven(l)

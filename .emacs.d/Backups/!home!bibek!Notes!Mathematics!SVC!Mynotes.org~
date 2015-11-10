@@ -1,0 +1,8 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+* Interesting limits:
+
+   lim
+
+  x --> inf.  (x)^(1/2)((x)^(1/2)+(x-3)^(1/2))

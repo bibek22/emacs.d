@@ -1,0 +1,62 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+* Analyzing insertion sort
+
+  few terms and jargon:
+
+<x-color><param>chocolate1</param>  # running time</x-color>
+
+<x-color><param>chocolate1</param>  # input size</x-color>
+
+<x-color><param>chocolate1</param>  # Worst and average case analysis</x-color>
+
+**  Worst case
+
+    The worst case or guarrented maximum time to perform the algorithm
+
+    is denoted by \theta() function with meaningful function of n.
+
+
+    Only the leading term of the function with highest exponent is of
+
+    interest when dealing with worst case.
+
+
+    An algorithm is considered more efficient if it's worst case running
+
+    time has a lower order of growth.
+
+  
+* Designing algorithm
+
+
+** Devide and conquer approach
+
+   Includes three steps at each step of recursion
+
+
+*** Divide
+
+    the problem into a number of sumproblems that are smaller
+
+    instances of the same problem.
+
+
+*** conquer the sub-problmes by solving them recursively.
+
+
+*** Combine
+
+    the solutions to the subproblmes into the solution for original
+
+    problem.
+
+
+** Merge Sort
+
+   
+
+   
+
+  

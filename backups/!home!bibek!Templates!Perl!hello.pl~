@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+
+print "Hello, world!\n";
+
+@arrays = ("socks", "shoes", "shorts");
+print "the array contains %d items\n", $#items + 1;

@@ -1,0 +1,16 @@
+
+(define (sqrt x guess )
+  (if (goodenough? x guess)
+      guess
+      (sqrt  x (average guess (/ x guess)))))
+
+(define (average x y)
+  (/ (+ x y) 2))
+
+(define (goodenough? x guess)
+  (< (abs (- (square guess) x)) .001))
+
+(define (square x)
+  (* x x))
+
+(sqrt 4 1)

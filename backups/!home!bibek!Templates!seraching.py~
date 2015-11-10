@@ -1,0 +1,7 @@
+A=[]
+
+query=int(raw_input("Enter the value you want to search:"))
+
+for i in A:
+    if i==query:
+        print "Your query ", query, "is at ", i, "on the database."

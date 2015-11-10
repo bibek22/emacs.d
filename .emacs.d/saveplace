@@ -1,0 +1,49 @@
+;;; -*- coding: utf-8 -*-
+(("/home/bibek/ubuntu/home/bibek/sinklists.log" . 23163)
+ ("/home/bibek/packagesinstalled.log" . 532)
+ ("/home/bibek/.config/openbox/rc.xml" . 9069)
+ ("/home/bibek/"
+  (dired-filename . "/home/bibek/ubuntu"))
+ ("/home/bibek/ubuntu/"
+  (dired-filename . "/home/bibek/ubuntu/home"))
+ ("/home/bibek/ubuntu/home/"
+  (dired-filename . "/home/bibek/ubuntu/home/bibek"))
+ ("/home/bibek/ubuntu/home/bibek/.ViberPC/"
+  (dired-filename . "/home/bibek/ubuntu/home/bibek/.ViberPC/.."))
+ ("/home/bibek/ubuntu/home/bibek/"
+  (dired-filename . "/home/bibek/ubuntu/home/bibek/Videos"))
+ ("/home/bibek/ubuntu/home/bibek/Videos/"
+  (dired-filename . "/home/bibek/ubuntu/home/bibek/Videos/Series"))
+ ("/home/bibek/ubuntu/home/bibek/Videos/Series/"
+  (dired-filename . "/home/bibek/ubuntu/home/bibek/Videos/Series/game of thrones s5"))
+ ("/home/bibek/ubuntu/home/bibek/Videos/Series/game of thrones s5/"
+  (dired-filename . "/home/bibek/ubuntu/home/bibek/Videos/Series/game of thrones s5/Game.of.Thrones.S05E03.HDTV.x264-Xclusive4iPT.mp4"))
+ ("/home/bibek/.bin/ossvol" . 710)
+ ("/home/bibek/.bashrc" . 8443)
+ ("/home/bibek/VolUp.sh" . 14)
+ ("/home/bibek/Notes/Computing/Networking/codes/UDPServer.py" . 153)
+ ("/home/bibek/Notes/Computing/Networking/codes/UDPClient.py" . 18)
+ ("/home/bibek/Notes/Computing/Networking/codes/TCPServer.py" . 212)
+ ("/home/bibek/Notes/Computing/Networking/Application_layer.org" . 25334)
+ ("/home/bibek/mousefreeze.sh" . 12)
+ ("/home/bibek/Notes/Computing/Networking/Actual_application.org" . 1267)
+ ("/home/bibek/Notes/Computing/Networking/TransportLayer.org" . 12)
+ ("/home/bibek/Notes/Computing/Networking/codes/TCPclient.py" . 278)
+ ("/home/bibek/.emacs.d/init.el" . 7454)
+ ("/home/bibek/.emacs.d/Backups/"
+  (dired-filename . "/home/bibek/.emacs.d/Backups/!home!bibek!.emacs.d.myown!elpa!dired-details+-20150104.2150!dired-details+-autoloads.el~"))
+ ("/home/bibek/Notes/linux/awesome.org" . 115)
+ ("/etc/X11/xinit/xinitrc" . 164)
+ ("/home/bibek/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml" . 1222)
+ ("/home/bibek/.config/xfce4/desktop/icons.screen0-1350x702.rc" . 535)
+ ("/home/bibek/test.sh" . 12)
+ ("/home/bibek/codes/bash/admin-info" . 106)
+ ("/home/bibek/ultimate.desktop" . 46)
+ ("/home/bibek/.themes/Natura/openbox-3/themerc" . 463)
+ ("/usr/share/themes/"
+  (dired-filename . "/usr/share/themes/."))
+ ("/home/bibek/.i3/config" . 2748)
+ ("/home/bibek/.config/tint2/tint2rc" . 1999)
+ ("/home/bibek/.emacs.d.myown/init.el" . 6126)
+ ("/home/bibek/.xsession-errors" . 101)
+ ("/home/bibek/nopblm-error.xsession-error" . 4315))

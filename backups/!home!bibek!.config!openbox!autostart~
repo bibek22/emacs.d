@@ -1,0 +1,4 @@
+setxkbmap -option ctrl:nocaps &
+xbacklight -set 1 &
+numlockx &
+sudo netctl start wlp2s0-Gharko_Wifi &

@@ -1,0 +1,10 @@
+\documentclass{11pt}{article}
+\begin{document}
+This will produce \textit{italicied} text.
+This will produce \textbf{bold-face} text.
+This will produce \textsc{small caps} text.
+This will produce \texttt{typewriter} text.
+Please visit Mrs. Krummer's website at \texttt{http://mrskrummer.com}.
+Please excure my dear aunt Sally. 
+Please excure my \begin{large} dear aunt Sally \end{large}
+\end{document}

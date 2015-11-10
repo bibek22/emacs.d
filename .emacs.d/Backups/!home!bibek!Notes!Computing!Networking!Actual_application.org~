@@ -1,0 +1,14 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<x-color><param>#205070</param>* Overview</x-color>
+
+  An application may be created by many different programmers. Like the client side of an application
+
+  may be created by one developer and the server side of the applicatin by the other. In such case, the
+
+  client and server side of the application have to be able to communicate with each other. For that to
+
+  happen they need to meet conditions. This is done by both of the developers following/sticking to pre-set
+
+  criterias like RFC.

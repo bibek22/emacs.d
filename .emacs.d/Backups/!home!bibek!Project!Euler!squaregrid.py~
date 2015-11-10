@@ -1,0 +1,6 @@
+total  = 1
+n = 1
+while n<500:
+    last = 1
+    side = 2 *n
+    total += 4*last +

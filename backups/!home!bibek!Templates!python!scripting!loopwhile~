@@ -1,0 +1,8 @@
+#!/usr/bin/python2
+
+import time
+counter = 0
+while True:
+    time.sleep(1)
+    counter += 1
+    print "Script has gone through ", counter , " loops"

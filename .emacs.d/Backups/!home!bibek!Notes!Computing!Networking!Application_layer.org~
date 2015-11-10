@@ -1,0 +1,1199 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+* Overview
+  the innermost layer.
+
+
+** Client and server structure
+
+** Two major architecture of application layer
+
+**** Server host architecture
+
+**** and peer to peer
+
+
+** Interface between process and the computer Network
+
+   Any message passes from application from host to server
+
+   through or otherwise must pass from the underlying architecture
+
+   of network. The interface that connects the application to the
+
+   intework is #socket.
+
+
+   A socket is essentially an interface between application layer
+
+   and trasport layer within a host. It is also called
+
+<x-color><param>chocolate1</param>   # Application Programming Interface (API)</x-color>
+
+
+** Addressing protocol
+
+   In the internet, host is identified by it's IP Address which is
+
+   32bit quantity that uniquely specifies the host. This specifies the
+
+   host to which the package is destined.
+
+
+   That's not enough for the packets to arrive at the specific process
+
+   running within the host to which the message is relevant.
+
+
+   This is done by the help of the specific
+
+<x-color><param>chocolate1</param>   # port number</x-color>
+
+   which specifies the process to which the packets is to be directed.
+
+
+   Some general processes are assigned specific port number as:
+
+   Web server:80
+
+   Mail server process:25
+
+
+** Transport services available to applications
+
+*** Services to applications from transport layer protocol
+
+**** Reliable data transfer
+
+     Data may get lost due to the crowding of the packets in the router
+
+     and the packets being dropped. One major service that transfer protocol
+
+     can provide to application layer is the reliable data transfer.
+
+
+     It may not be that important for the loss-tolerant applications like
+
+     conversational audio/video.
+
+     The lost data might result in minor glitch in the audio/video not a major
+
+     impairment.
+
+**** Throughput
+
+     As already discussed before, throughput is the rate at which the packets
+
+     are being delivered at the instance. Or the maximum guarrented delivery rate.
+
+
+     Transfer protocol can provide application with a throughput as requested by
+
+     the application.
+
+
+     Again, this might be of little importance to some applications like
+
+     web-tranfer, mail, file tranfer. These are called elastic applications.
+
+     Off course, the more throughput the better.
+
+
+     <x-color><param>LightSkyBlue</param>| One can not be too rich, too thin or have too much throughput!</x-color>
+
+
+     But those applications that do care about the throughput are called
+
+<x-color><param>chocolate1</param>     # bandwidth-sensitive applications.</x-color>
+
+**** Timing
+
+     Some real-time applications like web-gaming, VoiP, virtual environments,
+
+     teleconferencing etc require timing constraints.
+
+
+     That is they might need the packets thrown at the **socket** to be delivered
+
+     to the destination socket no more than 100 msec later.
+
+     This service is appealing to interactive real-time applications.
+
+
+     The faster is always better but no any strict constraints is placed on
+
+<x-color><param>chocolate1</param>     # end-to-end delays</x-color>
+
+     by non interactive applications.
+**** Security
+
+     Transfer layer protocol can also provide security to the packets being
+
+     delivered. It can encrypt the outgoing data at the server end socket and
+
+     decrypt them before feeding them to the client-end socket.
+
+
+     In addition to confidentiality, it may provide, data integrity, and end-point
+
+     authentication.
+
+
+** Transport services provided by the internet.
+
+*** General requirement for few web apps
+
+
+    <x-color><param>LightSkyBlue</param>|------------------------+---------------+------------+------------------|</x-color>
+    <x-color><param>LightSkyBlue</param>| Application            | Data Loss     | Throughput | Time-sensitivity |</x-color>
+    <x-color><param>LightSkyBlue</param>|------------------------+---------------+------------+------------------|</x-color>
+    <x-color><param>LightSkyBlue</param>| File-transfer/Download | No loss       | Elastic    | No               |</x-color>
+    <x-color><param>LightSkyBlue</param>|------------------------+---------------+------------+------------------|</x-color>
+    <x-color><param>LightSkyBlue</param>| Email                  | No loss       | Elastic    | No               |</x-color>
+    <x-color><param>LightSkyBlue</param>|------------------------+---------------+------------+------------------|</x-color>
+    <x-color><param>LightSkyBlue</param>| Web Documents          | no loss       | elastic    | no               |</x-color>
+    <x-color><param>LightSkyBlue</param>|------------------------+---------------+------------+------------------|</x-color>
+    <x-color><param>LightSkyBlue</param>| internet telephony/    |               |            |                  |</x-color>
+    <x-color><param>LightSkyBlue</param>| Video conferencing     | Loss tolerant |            |                  |</x-color>
+    <x-color><param>LightSkyBlue</param>|------------------------+---------------+------------+------------------|</x-color>
+    to be continued.
+
+
+** TCP services
+
+*** Connection oriented services
+
+    TCP has the client and server exchange transprot layer control
+
+    information with each other before the application-level messages
+
+    begin to flow. This is called
+
+<x-color><param>chocolate1</param>    # handshaking phase.</x-color>
+
+    A TCP connection is said to exist between the sockets of the
+
+    two processes.
+
+
+    Both the ends can send the packets at the same time.
+
+<x-color><param>chocolate1</param>    # full duples connection</x-color>
+
+
+    And the connection is to be teared down once the application
+
+    finishes sending the messages.
+
+    
+
+*** Reliable data transfer service
+
+    once TCP API is imployed, the application can count on it for
+
+    the full and ordered delivery of the packets to the destination
+
+    with no missing or duplicate bytes.
+
+    
+
+
+   Besides it also includes congestion control mechanism which can
+
+   throttle the client or server process once the congestion occurs
+
+   in any point in the connection.
+
+
+** UDP services
+
+   No-frills lightweight transport protocol that provides minimal
+
+   services. It is connectionless, so there is no handshaking.
+
+   It provides no guarantee of the delivery of the data and
+
+   the data may arrive at the receiving process at any rate and
+
+   out of order.
+
+   It also does not include congestion control mechanism.
+
+
+** Services ~ provided by ITP
+
+   Of the four major services critical to the application which are:
+
+   <x-color><param>LightSkyBlue</param>|security</x-color>
+
+   <x-color><param>LightSkyBlue</param>|reliable service</x-color>
+
+   <x-color><param>LightSkyBlue</param>|timing</x-color>
+
+   <x-color><param>LightSkyBlue</param>|throughput</x-color>
+
+
+   today's internet can provide satisfacgtory services to the
+
+   time-sensitive applications, but it cannot provide any timing or
+
+   throughput guarantees.
+
+
+** Application and underlying Protocol
+
+   All of:                      (Application L. Protocol)
+
+   Electronic mail               SMTP
+
+   Remote terminal access        Telnet
+
+   Web                           HTTP
+
+   File Transfer                 FTP
+
+   Streaming multimedia          HTTP
+
+
+   USE TCP!
+
+
+   But internet Telephony might use TCP or UDP.
+
+   Most firewalls are designed to block UDP(why?) so
+
+   intenet telephony uses TCP as a back up protocol in
+
+   case UDP fails.
+
+   
+
+
+* Application-layer Procols
+
+  It is important part of network application.
+
+  For example web applications contain many pieces
+
+  which include standards for document formats and sequence,
+
+  web servers, browser,  and application layer protocol.
+
+
+  
+
+  SMTP- Simple mail tranfer protocol.
+
+  Protocols we're gonna discuss:
+
+  HTML
+
+  FTP
+
+  Electronic mail
+
+  DNS
+
+  P2P
+
+  and multimedia applications.
+
+  
+
+* The Web and HTTP
+
+
+** HTTP:Overview
+
+   -uses TCP as an underlying transfer protocol.
+
+   -Server side is the web server that houses all the HTML objects
+
+   -Client side is the browser which requests the HTML objects.
+
+   -client first establishes connection with the server
+
+   -client then sends the request to the server for HTML objects
+
+   -server responds by sending the objects
+
+   -server has no record of the objects being served. meaning it can
+
+   and does serve the objects no matter how frequently and recently
+
+   requested.
+
+
+<x-color><param>chocolate1</param>   # so called stateless protocol.</x-color>
+
+
+** Non persistent and persistent connections
+
+   Basically concerns the persistence of the TCP connection established.
+
+   The respond from the server comes from the same TCP connection used to
+
+   request by the client or a different and does client creates new
+
+   connection each time it requests for some file from the same
+
+   server.
+
+
+*** Non-persistence
+
+    During each non-persistent connection packets goes through two RRT-round trip
+
+
+<x-color><param>chocolate1</param>    # Three way handshake.</x-color>
+
+    
+
+    
+*** Persistent connection
+
+    saves a round trip time in each request-delivery session of packets.
+
+
+** HTTP message format
+
+   HTTP request message
+
+
+   -in ordinary ASCII text.
+
+   -lines and carriage return
+    
+
+   First line is request line
+
+   subsequest lines are called header lines.
+
+
+   request line has three fields.
+
+   -method field
+
+   can take several different methods including
+
+   GET POST HEAD PUT DELETE
+
+
+   header lines
+
+   Host: specifies host on which object resides
+
+   Connection: Close
+
+   tells the server that it doesn't want to bother with
+
+   persistent connection.
+
+
+   User-agent: specifies user agent, that is, the browser type
+
+   that is making the request.
+
+
+   Accept-language: indicates the prefered language.
+
+   aka one of content negotiation header
+
+
+** Extended URLs used sometime to request pages formatted in specific ways
+
+   That is when the user is required to input some query and that input is
+
+   taken as the search criteria.
+
+
+** HTTP request Message
+
+
+   GET /somedir/page.html HTTP/1.1
+
+   Host: www.someschool.edu
+
+   Connection: close
+
+   User-agent: Mozilla/5.0
+
+   Accept-language: fr
+
+      
+
+** Server response
+
+   HTTP/1.1 200 OK
+
+   Connection: close
+
+   Date: Tue, 09 Aug 2011  XX:XX:XX GMT
+
+   Server: Apache/2.2.3 (CentOs)
+
+   Last-Modified: Tue, 09 Aug 2011 15:11:03 GMT
+
+   Content-Length: 6821
+
+   Content-type: text/html
+
+
+   (data data data data ..........)
+
+
+
+
+   The first line is the status line.
+
+   The above 6 lines above the data are header entry.
+
+
+   The rest of the entry is called entity body.
+
+   It contains the requested message itself.
+
+
+*** Status line
+
+    the status line has three fields.
+
+    protocol verification:
+
+    protocol version filed
+
+    a status code
+
+    and and a corresponding status message
+
+
+    In this particular example the status line indicates the server
+
+    is running the HTML/1.1 and that everything is OK (that is the
+
+    server has found, and is sending, the requested object.)
+
+
+*** Header line
+
+    Connection: close
+
+    means client is going to close the connection once it transmits the
+
+    message.
+
+
+    Date: time and date when the HTTP response was created and sent by the
+
+    server. This is the time when the server received the object from the archive.
+
+    
+
+    The server: message was generated by the web server Apache.
+
+
+    It is analogous to user-agent header line in the request line.
+
+
+    Last-Modified: header indicatest the time and date when the object was created or
+
+    last modified.
+
+    It is important for object caching in both local client and in network cache servers
+
+    aka proxy servers.
+
+
+
+    Content-Length: header line indicates the number of bytest in the object being
+
+    sent.
+
+
+    Content-Type: header line indicates that the object in the message is HTML text.
+
+    (the object type is officially indicated by the Content-Type: header not by the file
+
+    extension.)
+
+
+
+    The status code:
+
+    <x-color><param>LightSkyBlue</param>| 200 OK: Request succeeded.</x-color>
+
+    <x-color><param>LightSkyBlue</param>| 301 Moved permanently</x-color>
+
+    <x-color><param>LightSkyBlue</param>| 400 Bad Request: This is a generic error code indicating the request couldn't be understood.</x-color>
+
+    <x-color><param>LightSkyBlue</param>| 404 Not Found: The requested document does not exist on this server.</x-color>
+
+    <x-color><param>LightSkyBlue</param>| 505 HTTP Version Not Supported: The HTTP protocol version is not supported. by the server.</x-color>
+
+
+    
+
+    WTF is Network case server/ proxy server?
+
+
+** User-server Interaction: Cookies
+
+   Though HTTP is said to be stateless protocol. Sometimes it is convinient to
+
+   keep track of the users. this is done by the cookies.
+
+   Cookies help serve contents as a function of user identity.
+
+
+   Cookies has four components:
+
+   1. A cookie header line in response message
+
+   2. a cookie header line in HTTP request message
+
+   3. a cookies file kep on the user's end system
+
+   4. a back-end database at the server.
+
+
+   When one browser first visits a website that serves cookies. It adds on cookie
+
+   header line in the response message which is read by the browser. Browser then
+
+   adds some line in the cookies file the information requested by the server and
+
+   the identification of the browser/user to the website.
+
+
+** Web-Caching
+
+   Web cache aka **Proxy Server**
+
+   is a network entity that satisfies HTTP requests on the behalf of an
+
+   Web server. It has it's own disk storage and keeps copies of recently
+
+   requested objeccts in this storage.
+
+
+   A user's browser can be configured so that all the user's HTTP requests are first
+
+   directed to the Web cache.
+
+
+   1. The browser establishes TCP connection to the web cache and sends an HTTP
+
+      request for the object to the web cache
+
+
+   2. The web Cache checks to see if it has a copy of the object stored locally. If it
+
+      does,the web cache returns the object within HTTP response message to the client
+
+      browser.
+
+
+   3. If web cache doesn't have a copy of object, the web cache opens a TCP connection
+
+      to the origin server, that is, to www.someschool.edu. The web cache
+
+      then sends an HTTP request for the object into the cache-server
+
+      TCP connection. After receiving this request, the origin server sends the object
+
+      within the HTTP response to the Web cache.
+
+
+   4. When the web cache receives the object, it stores a copy in it's local storage and
+
+      sends a copy, within an HTTP response message to the client browser(over existing
+
+      connection)
+
+      
+
+<x-color><param>chocolate1</param>   # Hit rates :The fraction of requests satisfied by the cache</x-color>
+
+   typically ranges from .2 to .7
+
+
+   Content distribution networks(CDN)
+
+
+** The conditional GET
+
+   One issue that comes with the caching of objects on proxy server is that the
+
+   objects cached may become stale. The object should be updated to get the
+
+   new version of object as early as possible.
+
+   This is done by conditional GET.
+
+
+   An HTTP request message is so-called conditional GET message if (1) the request 
+
+   message uses GET method and (2) the request message includes an If-Modified-Since:
+
+   header-line.
+
+
+   One sample:
+
+   GET /fruit/kiwi.gif HTTP/1.1
+
+   Host: www.exotiquecuisine.com
+
+   If-modified-since: Wed, 7 Sep 2011 09:23:24
+
+
+   GET tells the server to send the object only if it has been modified since the date
+
+   provided.
+
+   
+
+
+   HTTP/1.1 304 Not Modified
+
+   Date: Sat, 15 OCt 2011 15:39:29
+
+   Server: Apache/1.3.0 (Unix)
+
+
+   (empty entity body)
+
+
+
+   
+* File Transfer: FTP
+
+  Transfer files to and from local host and remote host.
+
+  user first access the remote account with username and password
+
+
+  It also runs on the top of TCP just as HTTP.
+
+
+  Unlike HTTP, FTP uses two TCP connections to transfer file.
+
+  a Control connection and a data connection.
+
+
+  Control information like user identification/pssd commands to
+
+  change remote directory and to put and get files are sent via
+
+  control connection.
+
+
+  The actual data is send over data connection.
+
+
+  So, it is said to send control information out-of-band.
+
+  While HTTP is said to send it's control information in-band.
+
+  and so is the case with SMTP (protocol for electronic mail )
+
+
+
+  
+
+  first client establishes a TCP connnection to the host/remote server
+
+  on the port number 21. Client side sends user id and password over
+
+  this connection. And also commands to change the remote directory.
+
+
+  When server side receives a command for a file transfer over control
+
+  connection (either to or from the server), the server then iniates
+
+  TCP data connection to the client side.
+
+  FTP sends exactly one file over the data connection and then
+
+  closes the data connection.
+
+
+  Thus, with FTP, the control connection remains open throughout
+
+  the duration of the user session. But a new data connection is created
+
+  for each file transferred within a session.
+
+
+  Throughout a session, the FTP server must maintain state about the
+
+  user.
+
+  associate connection to a specific user and keep track of user's current
+
+  directory.
+
+  
+
+  This tracking scheme significantly constrains the number of session that
+
+  FTP can maintain simultaneously.
+
+
+** Commands and replies(FTP)
+
+   commands are sent in 7-bit ASCII format. so totally readable.
+
+
+   A command consists 4 UPPERCACE ASCII characters some with optional arguments
+
+
+   USER username:
+
+   USER password:
+
+   LIST: to list the files in $PWD
+
+   RETR filename: retrieve (get) a file from current directory of remote host.
+
+   STOR filename: Used to store a file into the current directory of remote host.
+
+
+
+   Each request is followed by a response from the server.
+
+   replies are three digits numbers with optional message following the number
+
+
+   331 Username OK, password required
+
+   125 Data connection already open; tranfer starting
+
+   425 Can't open data connection
+
+   452 Error writing file
+
+
+* Electronic mail in the internet.
+
+  SMTP(Simple Mail Transfer Protocol)
+
+
+  It uses reliable data transfer service of TCP.
+
+  All mail server can act as server and client when needed.
+
+
+
+  Alice's user agent sends the message to her mail server where mail is placed
+
+  in mail server's outgoing message queue. when Bob want to read a message, his user
+
+  agent retrieves the message from his mailbox in his server.
+
+
+** SMTP
+
+   SMTP is much older than HTTP.
+
+   SMTP for this reason has archaic idiosyncracy like it restricts the message not
+
+   just the command header line to simple 7-bit ASCII.
+
+   Uses persistent connnection to transfer files if more than one are to be done.
+
+   
+
+   1. first Alice logs into her user agent. Inputs the Bob's email address and
+
+      composes her message and instrusts the mail server to send the message.
+
+   2. User agent then sends the message to the mail server, where it is placed in a
+
+      message queue.
+
+   3. The client side of SMTP, running on Alice's mail server, sees the message in
+
+      the message queue. It opens TCP connection to an SMTP server, running on Bob's
+
+      server.
+
+
+   4. After some initial SMTP handshaking, the STMP client sends  Alic'es message into
+
+      TCP connection.
+
+
+   5. At Bob's mail server, the server side of SMTP receives the message. Bob's mail
+
+      server then places the message in Bob's mailbox.
+
+   6.Bob invokes his user agent to read the message at his convinience.
+
+
+
+   SMTP on client side has the TCP establish a connection to port 25 at the server STMP end that is
+
+   to the receiver's mail server.
+
+
+   Server and client perform some initial handshaking before sending the actual message over reliable TCP
+
+   connection.
+
+
+   Example transcript of client server interaction
+
+
+   S: 220 hamburger.edu
+
+   C: HELO crepes.fr
+
+   S: 250 crepes.fr, pleased to meet you
+
+   C: Mail from: <<alice@crepes.fr>
+
+   S: 250 alice@crepes.fr ... Sender ok
+
+   C: RCTP To: <<bob@hamburger.edu>
+
+   S: 250 bob@hamburger.edu ... Recipient ok
+
+   C: DATA
+
+   S: 354 Enter mail, end with "." on a line by itself.
+
+   C: Do you like ketchup?
+
+   C: How about pickles?
+
+   C: .
+
+   S: 250 Message accepted for delivery
+
+   C: QUIT
+
+   S: 221 hamburger.edu closing connection
+
+   
+
+*** comparison with HTTP
+
+    
+
+    HTTP is intrinsically a pull protocol meaning someones pulls some objects off some web server.
+
+    While SMTP is a bush protocol- the sending mail server pushes the file to the receiving mail server.
+
+    That is TCP connection is iniated by the machine that wants to send the file.
+
+
+    SMTP requires the message to be encoded to 7  bit ASCII even if it's accentuated characters and
+
+    photos that is to be transfered.
+
+
+    Similarly, HTTP encapsulates each object in it's own HTTP response message while
+
+    SMTP places all the message's objects into one message.
+
+
+*** Mail message format
+
+    Typical message header
+
+
+    From: alice@crepes.fr
+
+    To: bob@hamburger.edu
+
+    Subject: Searching for the meaning of life.
+
+
+    <<message>
+
+
+*** Mail access protocol
+
+    Today people access their mail from user agent placed in
+
+    their computer or phone or devices. One logical idea would
+
+    be to place the mail server right on these devices so that
+
+    the sender end communicates directly with this devices which
+
+    would be problematic because they have to be on and running
+
+    all the time as message can come at anytime.
+
+
+    And on the other side of the process, the sender user agent could
+
+    directly send the message to the receipients' mail server
+
+    but this again could be problematic because it can do nothing
+
+    if the receipient is not reachable at the moment of sending the
+
+    message. While once the message is uploaded into the sender's
+
+    mail server, the mail server can repeatedly try to send the
+
+    message to the receipient's mail server in say every 30 mins.
+
+
+    And if sender's mail server is down, s/he can always complain to
+
+    his/her administrator.
+
+
+**** Mail access protocol
+
+     still remaining piece to the puzzle is how the message gets received
+
+     to the receipient user agent from the respective mail server.
+
+
+     Note that, SMTP is not employed for this process because accessing mail
+
+     is pull protocol while SMTP is essentially push protocl.
+
+
+     That's when mail access protocol comes into play.
+
+
+     Some of which are :
+
+
+<x-color><param>chocolate1</param>     # POP3 : Post office protoocl--version 3</x-color>
+
+<x-color><param>chocolate1</param>     # IMAP : Internet Mail access Protocol</x-color>
+
+
+*** POP3
+
+    Port used=110 (TCP)
+
+    Extremely simple protocol.
+
+    First user agent opens a TCP connection to the mail server over port
+
+    110 .
+
+    Once the connection is established the POP3 progresses in 3 phases.
+
+    Authorization
+
+    Transaction
+
+    Update
+
+
+
+    during authorization, the use agent sends the username and password
+
+    to authenticate the user.
+
+    During transaction, user agent receives message and can mark messages for
+
+    deletion.
+
+    The third phase update, occurs after the client has issued the quit
+
+    command ending POP3 session, at which time, mail server deletes messages
+
+    marked for deletion.
+
+
+    
+
+	
+
+
+	
+*** IMAP
+
+    IMAP overcomes one problem that arise with POP3 that is it tracks the status
+
+    of messages. Which means the user can create folders and associate each files with
+
+    a folder and access the same way from any number of devices.
+
+
+    Another feature of IMAP is that it allows user to receive part of the message.
+
+    like header or other parts.
+
+
+*** Web-based E-mail
+
+    With this service, user agent which is an ordinary web browser communicates
+
+    with the mail server with HTTP protocol rather than POP3/IMAP.
+
+
+    and also outgoing message are sent to mail server via HTTP.
+
+
+    
+* DNS
+
+  Direcotry of the IPs
+
+
+<x-color><param>chocolate1</param>  # IP</x-color>
+
+   4 bytes and has rigid hierarchical structure.
+
+
+   DNS - Domain name system.
+
+   DNS is:
+
+   a distributed database implemented in a heirarchy of DNS
+
+   servers.
+
+   
+
+   1. Client side of DNS is the same machine that request page.
+
+   2. The browser extracts the hostname and passes that to the
+
+      client side of DNS application.
+
+   3. DNS client sends query containing hostname to DNS server
+
+   4. DNS client eventaually receives a reply with IP address for
+
+      the hostname
+
+   5. Once the browser receives the IP address from DNs. it can iniate  a
+
+      TCP connection to HTTP server process located at port 80 at that IP
+
+      address.
+
+
+
+
+
+   Services by DNS
+
+   1. Mail server aliasing
+
+   2. Load distribution
+
+      Busy sites can have many ips associated with one hostname
+
+      and DNS returns the IP to the DNS client by rotating their order
+
+      and since browser generally connects to first IP on the list the
+
+      traffic is distributed.
+
+
+** How DNS works
+
+   DNS servers provide a sort of black box abstraction to the clients
+
+   for the translation service of the Host addresses to IP.
+
+   Clients make UDP connection to the port 53 of the DNS server.
+
+   and send the query message.
+
+
+   Simple model of DNS system would be a single DNS server which
+
+   would serve every hosts. This model not realistic due to :
+
+   1. large size of today's intenet.
+
+   2. A sinle point of failure - if the DNS server crashes, so does the entire
+
+      internet.
+
+   3. Distant centralized database - a single server not close to many "ones"
+
+   4. maintainance: It would have to be updated for every new host. would be large
+
+      and process tiresome.
+
+
+      
+
+   So, infact DNS is distributed by design.
+
+
+<x-color><param>chocolate1</param>   # Distributed Hierarchical Database</x-color>
+
+   To deal with the size of the hosts, DNS uses a large number of servers organized in
+
+   hierarchical fashion and distributed around the world.
+
+   No single DNS server has all the mappings instead they are distributed among the
+
+   servers around the globe.
+
+
+<x-color><param>chocolate1</param>   # Root DNS servers</x-color>
+
+<x-color><param>chocolate1</param>   # Top-level Domain</x-color>
+
+<x-color><param>chocolate1</param>   # Authoritative DNS servers</x-color>
+
+
+
+   how DNS query and response work.
+
+
+   First, the host machine makes request to local dns server at polytechnic which then  makes
+
+   a query to the root server. Root responds to local dns server with the IP of
+
+   the TLD that houses or is responsible for ".edu".
+
+   Then, local DNS server resends a query to the TLD server the IP of which it
+
+   received from the root server. Then the TLD server replies the local dns server
+
+   with the IP of the authoritative dns server at umass. i.e dns.umass.edu
+
+
+   Finally, local DNs sends the query to authoritative dns server of umass which then responds with
+
+   the IP of the gaia.cs.umass.edu.
+
+
+   eight DNS messages were sent to make this query and get reply.
+
+
+   In this model, the query and request are both recursive and iterative.
+
+
+** DNS caching
+
+   DNS caching makes the query of IP hostname translation a lot faster.
+
+   DNS server at all levels can cache the DNS servers that are recently requested.
+
+   And upon another request of the same host within fixed time before the cache is cleared, the reply
+
+   can happen without the recursion required to acquire the information at that very level.
+
+
+** DNS message
+
+   refer to note/physical for it.
+
+
+** Inserting record into the DNS database
+
+
+* Peer2Peer
+
+  

@@ -1,0 +1,37 @@
+\documentclass{article}
+\title{My first docutment}
+\date{\today}
+\author{Bibek Gautam}
+\usepackage[margin=.8in, paperwidth=5in, paperheight=6.7in]{geometry}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\def\eq1{y=\frac{x}{3x^2+x+1}}
+
+\begin{document}
+\tableofcontents 
+       \pagenumbering{gobble}
+        \maketitle
+        \newpage
+        \pagenumbering{arabic}
+        Hello World!
+\section{Linear Function}
+   \subsection{slope-intercept form}
+   The slope-intercept form is given by : $$y=ax+b$$
+   \subsection{standard form}
+   \subsection{point-slope form}
+
+\section{Quadratic Function}
+   \subsection{Vertex form}
+   \subsection{Standard form}
+   \subsection{Factored form}
+
+There are sets of Natural numbers denoted by $\mathbb{N}$.
+
+And the symbol for real numbers is $\mathbb{R}$.
+
+Graph $\eq1$.
+
+Identify the asymptotes for the graph of $\eq1$.
+
+\begin{flushleft}\includegraphics[width=4in]{emacsguide.png}\end{flushleft}
+\end{document}

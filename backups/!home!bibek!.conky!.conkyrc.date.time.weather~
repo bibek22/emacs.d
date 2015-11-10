@@ -1,0 +1,234 @@
+#====================================
+#   Conky Settings
+#====================================
+background yes
+update_interval 1
+double_buffer yes
+no_buffers yes
+
+
+#====================================
+#   Window Specifications
+#====================================
+gap_x 0
+gap_y 0
+alignment tl
+
+minimum_size 600 380
+maximum_width 600
+
+own_window yes
+own_window_type override
+own_window_transparent yes
+# own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+own_window_argb_visual yes
+own_window_argb_value 0
+
+#border_margin 0
+#border_inner_margin 0
+#border_outer_margin 0
+
+
+#====================================
+#   Graphics Settings
+#====================================
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+
+#====================================
+#   Text Settings
+#====================================
+use_xft yes
+xftalpha 0
+xftfont sans serif:size=10
+override_utf8_locale yes
+imlib_cache_size 0
+
+
+#====================================
+#   Color Scheme
+#====================================
+default_color FFFFFF
+
+color0 ffa700 # clock
+color1  a0fdc9   # date
+color2 09ff00   # current temperature
+color3 af822f # aeff00   # high tempratures
+color4 ffaaaa # a2ff01   # low tempratures
+color5 fff555 # FFD700   # days
+color6 fff555 		 # wifi level
+
+
+#====================================
+#   Icon Sources
+#====================================
+template0 ~/.conky-vision-icons/FFFFFF  # today
+template1 ~/.conky-vision-icons/FFFFFF  # +1day
+template2 ~/.conky-vision-icons/FFFFFF  # +2days
+template3 ~/.conky-vision-icons/FFFFFF  # +3days
+template4 ~/.conky-vision-icons/FFFFFF  # +4days
+
+
+#====================================
+#   WOEID (Where On Earth ID)
+#====================================
+template7 2269055
+
+
+#====================================
+#   Temp Unit (c = Celsius, f = Fahrenheit)
+#====================================
+template8 c
+
+
+#====================================
+#   Language (e.g. es_ES.UTF-8)
+#====================================
+template9  # leave empty for locale
+
+
+###################################################
+###################################################
+
+
+own_window_argb_value 0
+own_window_argb_visual no
+own_window_colour 000000
+TEXT
+#----------------------------------------
+#   CURL
+#----------------------------------------
+\
+\
+${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=${template7}&u=${template8}" -o ~/.cache/weather.xml}\
+\
+\
+#----------------------------------------
+#   Clock
+#----------------------------------------
+\
+\
+${font Poiret One:weight=Light:size=96}${color0}\
+${alignc}${time %I:%M}\
+${font}${color}
+\
+\
+#----------------------------------------
+#   Date
+#----------------------------------------
+\
+\
+${font Poiret One:weight=Light:size=28}${color1}\
+${voffset 30}\
+${alignc}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A, %B %d"}\
+${font}${color}
+\
+\
+#----------------------------------------
+#   Current Temperature
+#----------------------------------------
+\
+\
+${font Poiret One:size=19}${color2}\
+${voffset 36}\
+${goto 60}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°\
+${font}${color}\
+\
+\
+#----------------------------------------
+#   High Temperatures
+#----------------------------------------
+\
+\
+${font Poiret One:size=12}${color3}\
+${goto 164}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°\
+\
+${goto 272}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°\
+\
+${goto 378}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°\
+\
+${goto 484}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°\
+${font}${color}\
+\
+\
+#----------------------------------------
+#   Low Temparatures
+#----------------------------------------
+\
+\
+${font Poiret One:size=12}${color4}\
+${voffset 52}\
+${goto 218}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°\
+${goto 324}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°\
+${goto 430}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°\
+${goto 536}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°\
+${font}${color}
+\
+\
+#----------------------------------------
+#   Day Names\
+#----------------------------------------
+\
+\
+${font Poiret Weight:Light One:size=12}${color5}\
+${voffset 20}\
+${goto 76}${execi 300 LANG=${template9} LC_TIME=${template9} date +%^a}\
+${goto 182}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%^a}\
+${goto 288}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2days +%^a}\
+${goto 394}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +3days +%^a}\
+${goto 500}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +4days +%^a}\
+${font}${color}
+\
+\
+#----------------------------------------
+#   Weather Icons
+#----------------------------------------
+\
+\
+${execi 300 cp -f ${template0}/$(grep "yweather:condition" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/weather-1.png}${image ~/.cache/weather-1.png -p 72,268 -s 32x32}\
+\
+${execi 300 cp -f ${template1}/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2').png ~/.cache/weather-2.png}${image ~/.cache/weather-2.png -p 178,268 -s 32x32}\
+\
+${execi 300 cp -f ${template2}/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3').png ~/.cache/weather-3.png}${image ~/.cache/weather-3.png -p 284,268 -s 32x32}\
+\
+${execi 300 cp -f ${template3}/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4').png ~/.cache/weather-4.png}${image ~/.cache/weather-4.png -p 390,268 -s 32x32}\
+\
+${execi 300 cp -f ${template4}/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5').png ~/.cache/weather-5.png}${image ~/.cache/weather-5.png -p 496,268 -s 32x32}\
+
+
+#-----------------------------------------
+#     Bat level
+#-----------------------------------------
+\
+\
+${voffset -40}
+# Battery Icon
+${image ~/.conky/pictures/Bat.png -p 60,380 -s 32x32}
+
+# Battery Bar, Status
+
+${font Poiret One:weight=Light:size=12}${color1}\
+${voffset -25}\
+${goto 100htop}${battery_short BAT1} ${battery_bar 10,30 BAT1}\
+${voffset 15}${goto 100}${battery_time BAT1}\
+${font}${color}
+
+# Wifi status
+${image ~/.conky/pictures/wifi.png -p 200,374 -s 32x32}
+${voffset -54}
+${font Poiret One:weight=Bold:size=10}${color6}${goto 213}${wireless_link_qual wlp2s0}
+${font}${color}
+
+# Audacious
+${goto 60}${if_running audacious}${audacious_bar 10,30}$audacious_length${endif}
+
+# Sd card
+${goto 320}${if_existing /dev/mmcblk0p1}${image ~/.conky/pictures/sdhc.png -p 240,376 32x32}${endif}
+
+
+# Speakers
+${if_existing /dev/snd/controlC2}${image ~/.conky/pictures/speaker.png -p 280,372 32x32}${endif}

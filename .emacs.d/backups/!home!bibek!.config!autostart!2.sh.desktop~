@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/bibek/bash.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=New Ctrl
+Name=New Ctrl
+Comment[en_US]=xkbmap
+Comment=xkbmap

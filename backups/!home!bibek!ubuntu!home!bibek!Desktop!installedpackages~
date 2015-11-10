@@ -1,0 +1,135 @@
+i   account-plugin-jabber           - Messaging account plugin for Jabber/XMPP
+i   account-plugin-salut            - Messaging account plugin for Local XMPP (S
+
+i   accountsservice                 - query and manipulate user account informat
+i   acl                             - Access control list utilities
+i   acpi-support                    - scripts for handling many ACPI events
+i   acpid                           - Advanced Configuration and Power Interface
+i   activity-log-manager            - blacklist configuration user interface for
+i   adduser                         - add and remove users and groups
+i   adium-theme-ubuntu              - Adium message style for Ubuntu
+
+i   apport                          - automatically generate crash reports for d
+
+i   apport-symptoms                 - symptom scripts for apport
+
+i   apt-xapian-index                - maintenance and search tools for a Xapian
+i   avahi-autoipd                   - Avahi IPv4LL network address configuration
+i   avahi-daemon                    - Avahi mDNS/DNS-SD daemon
+i   avahi-utils                     - Avahi browsing, publishing and discovery u
+i   bamfdaemon                      - Window matching library - daemon
+
+i   bluez                           - Bluetooth tools and daemons
+i   bluez-alsa                      - Bluetooth ALSA support
+
+i   bridge-utils                    - Utilities for configuring the Linux Ethern
+
+i   bsdmainutils                    - collection of more utilities from FreeBSD
+i   bsdutils                        - basic utilities from 4.4BSD-Lite
+
+i   cheese                          - tool to take pictures and videos from your
+i   cheese-common                   - Common files for the Cheese tool to take p
+i   chromium-codecs-ffmpeg-extra    - Extra ffmpeg codecs for the Chromium Brows
+
+i   debconf                         - Debian configuration management system
+
+i   debianutils                     - Miscellaneous utilities specific to Debian
+
+i   desktop-file-utils              - Utilities for .desktop files
+i   dialog                          - Displays user-friendly dialog boxes from s
+
+i   dmsetup                         - Linux Kernel Device Mapper userspace libra
+
+i   dnsutils                        - Clients provided with BIND
+i   doc-base                        - utilities to manage online documentation
+i   dosfstools                      - utilities for making and checking MS-DOS F
+
+i   gmerlin                         - multiformat media player
+
+i   gnome-control-center-shared-dat - configuration applets for GNOME - shared d
+i   gnome-desktop3-data             - Common files for GNOME desktop apps
+
+i   hwdata                          - hardware identification / configuration da
+
+
+
+i   kerneloops-daemon               - kernel oops tracker
+i   keyboard-configuration          - system-wide keyboard preferences
+i   klibc-utils                     - small utilities built with klibc for early
+i   kmod                            - tools for managing Linux kernel modules
+i   krb5-locales                    - Internationalization support for MIT Kerbe
+i   laptop-detect                   - attempt to detect a laptop
+
+
+
+
+
+
+
+i   mousetweaks                     - mouse accessibility enhancements for the G
+i   mpg321                          - Simple and lightweight command line MP3 pl
+i   mscompress                      - Microsoft "compress.exe/expand.exe" compat
+i   mtools                          - Tools for manipulating MSDOS files
+i   mtr-tiny                        - Full screen ncurses traceroute tool
+i   multiarch-support               - Transitional package to ensure multiarch c
+i   qdbus                           - Qt 4 D-Bus tool
+i   qemu-kvm                        - QEMU Full virtualization
+i   samba                           - SMB/CIFS file, print, and login server for
+i   samba-common                    - common files used by both the Samba server
+i   samba-common-bin                - Samba common files used by both the server
+i   samba-libs                      - Samba core libraries
+
+
+i   sensible-utils                  - Utilities for sensible alternative selecti
+i   ubuntu-sounds                   - Ubuntu's GNOME audio theme
+
+i   ubuntu-touch-sounds             - sounds for the Ubuntu Touch image
+
+i   x11-apps                        - X applications
+i   x11-common                      - X Window System (X.Org) infrastructure
+i   x11-session-utils               - X session utilities
+i   x11-utils                       - X11 utilities
+i   x11-xkb-utils                   - X11 XKB utilities
+i   x11-xserver-utils               - X server utilities
+
+
+
+
+i   alsa-base                       - ALSA driver configuration files
+i   alsa-utils                      - Utilities for configuring and using ALSA
+i   pavucontrol                     - PulseAudio Volume Control
+i   pulseaudio                      - PulseAudio sound server
+i   pulseaudio-module-bluetooth     - Bluetooth module for PulseAudio sound serv
+i   pulseaudio-module-x11           - X11 module for PulseAudio sound server
+i   pulseaudio-utils                - Command line tools for the PulseAudio soun
+
+
+i   gstreamer0.10-alsa              - GStreamer plugin for ALSA
+i   gstreamer0.10-fluendo-mp3       - Fluendo mp3 decoder GStreamer 0.10 plugin
+i   gstreamer0.10-nice              - ICE library (GStreamer 0.10 plugin)
+i   gstreamer0.10-plugins-bad       - GStreamer plugins from the "bad" set
+i   gstreamer0.10-plugins-bad-multi - GStreamer plugins from the "bad" set (Mult
+i   gstreamer0.10-plugins-base      - GStreamer plugins from the "base" set
+i   gstreamer0.10-plugins-base-apps - GStreamer helper programs from the "base"
+i   gstreamer0.10-plugins-good      - GStreamer plugins from the "good" set
+i   gstreamer0.10-plugins-ugly      - GStreamer plugins from the "ugly" set
+i   gstreamer0.10-pulseaudio        - GStreamer plugin for PulseAudio
+i   gstreamer0.10-tools             - Tools for use with GStreamer
+i   gstreamer0.10-x                 - GStreamer plugins for X11 and Pango
+i   gstreamer1.0-alsa               - GStreamer plugin for ALSA
+i   gstreamer1.0-clutter            - Clutter PLugin for GStreamer 1.0
+i   gstreamer1.0-fluendo-mp3        - Fluendo mp3 decoder GStreamer 1.0 plugin
+i   gstreamer1.0-libav              - libav plugin for GStreamer
+i   gstreamer1.0-nice               - ICE library (GStreamer plugin)
+i   gstreamer1.0-plugins-bad        - GStreamer plugins from the "bad" set
+i   gstreamer1.0-plugins-base       - GStreamer plugins from the "base" set
+i   gstreamer1.0-plugins-base-apps  - GStreamer helper programs from the "base"
+i   gstreamer1.0-plugins-good       - GStreamer plugins from the "good" set
+i   gstreamer1.0-plugins-ugly       - GStreamer plugins from the "ugly" set
+i   gstreamer1.0-pulseaudio         - GStreamer plugin for PulseAudio
+i   gstreamer1.0-tools              - Tools for use with GStreamer
+i   gstreamer1.0-x                  - GStreamer plugins for X11 and Pango
+i   indicator-sound                 - System sound indicator.
+i   linux-sound-base                - base package for ALSA and OSS sound system
+i   gnome-media                     - GNOME media utilities
+i   gnome-power-manager             - power management tool for the GNOME deskto

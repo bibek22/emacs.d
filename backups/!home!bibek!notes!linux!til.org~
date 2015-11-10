@@ -1,0 +1,40 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+* Bash doesn't have something like "start quote" and "end quote".
+
+  It just has interpretation mode. And quote act as a switch for that mode.
+
+  If the interpretation mode is on(default), the text/command is interpreted.
+
+  if there's a quote('), the interpretation mode is turned off and literal
+
+  is assumed/passsed along to command.
+
+  case in point.
+
+  var=2
+
+  echo '{print $'$var'}'  => {print $2}
+
+
+* want the variable in bash to have a default value?
+
+  Use the systex
+
+  {variable:-defaultvalue} to asign the value
+
+  eg.
+
+  column={$1:-1}
+
+
+* wanna clear the orphan packages?
+
+  Here's what you wanna do.
+
+  pacman -Qdt  --lists the orphan packages
+  sudo pacman -Rs $(pacman -Qtdq) --deletes them!
+
+  
+

@@ -1,0 +1,14 @@
+#!/usr/bin/python2
+from socket import *
+serverPort = 1052
+serverSocket = socket(AF_INET, SOCK_STREAM)
+serverSocket.bind(('', serverPort))
+serverSocket.listen(1)
+print "The server is ready to receive on port ", serverPort
+while True:
+    connectionSocket, addr = serverSocket.accept()
+    sentence = connectionSocket.recv(1024)
+    print "Received: ", sentence
+    capitalizedSentence = sentence.upper()
+    connectionSocket.send(capitalizedSentence)
+    connectionSocket.close()

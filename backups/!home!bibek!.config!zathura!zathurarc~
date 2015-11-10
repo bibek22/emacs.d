@@ -1,0 +1,21 @@
+set default-fg "#000000"
+set default-bg "#EFD3AA"
+set advance-pages-per-row true
+set page-padding 0
+set zoom-step 5
+
+set font Tamsyn 11
+set adjust_open width
+set show_inputbar false
+set scroll_wrap false
+set scroll-step 10
+set scroll-speed 10
+set smooth-scroll true
+set status-bar false
+set zoom-center true
+
+map <PageUp> scroll full_up
+map <PageDown> scroll full_down
+map ] navigate next
+map [ navigate previous
+map <C-q> quit

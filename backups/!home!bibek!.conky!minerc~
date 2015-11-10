@@ -1,0 +1,95 @@
+#====================================
+#   Conky Settings
+#====================================
+background yes
+update_interval 1
+double_buffer yes
+no_buffers yes
+
+
+#====================================
+#   Window Specifications
+#====================================
+gap_x 0
+gap_y 0
+alignment tl
+
+#====================================
+#   Graphics Settings
+#====================================
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+#====================================
+#   Text Settings
+#====================================
+use_xft yes
+xftalpha 0
+xftfont sans serif:size=10
+override_utf8_locale no
+imlib_cache_size 0
+
+
+#====================================
+#   Color Scheme
+#====================================
+default_color FFFFFF
+
+color0 ffa700 # clock
+color1  a0fdc9   # date
+color2 09ff00   # current temperature
+color3 af822f # aeff00   # high tempratures
+color4 ffaaaa # a2ff01   # low tempratures
+color5 fff555 # FFD700   # days
+color6 fff555 		 # wifi level
+color7 00ff00 #green speeds
+
+TEXT
+\
+\
+#-----------------------------------------
+#     Bat level
+#-----------------------------------------
+\
+\
+# Battery Icon
+${image ~/.conky/pictures/Bat.png -p 20,20 -s 32x32}
+\
+# Battery Bar, Status
+\
+${font Poiret One:weight=Light:size=12}${color1}\
+${goto 50}\
+${voffset 5}\
+${battery_short BAT1} ${battery_bar 10,30 BAT1}\
+${voffset 15}${goto 50}${battery_time BAT1}\
+${font}${color}\
+\
+#${color cyan}\
+# Wifi status
+${image ~/.conky/pictures/wifi.png -p 150,17 -s 32x32}\
+${font Poiret One:weight=Bold:size=10}${color6}\
+${voffset 7}${goto 158}\
+${wireless_link_qual wlp2s0}
+${font Poiret One}${color7}
+${voffset -40}${goto 180}${downspeed wlp2s0} #speed
+\
+# Audacious
+${voffset -10}\
+${goto 90}${if_running audacious}${audacious_bar 10,30}$audacious_length${endif}\
+\
+# Sd card
+${goto 320}${if_existing /dev/mmcblk0p1}${image ~/.conky/pictures/sdhc.png -p 190,20 32x32}${endif}
+\
+# Speakers
+${if_existing /dev/snd/controlC2}${image ~/.conky/pictures/speaker.png -p 225,22 -s 36x36}\
+${endif}
+\
+
+else
+execbar command value in bar
+exec gauze??
+execp p for parse
+
+scroll length step text

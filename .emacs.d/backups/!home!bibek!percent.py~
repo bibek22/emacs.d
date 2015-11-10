@@ -1,0 +1,22 @@
+dict_val={}
+a=""
+for i in range(25):
+    a.append(unichr(97+i))
+    
+for i in a:
+    dict_val[i]=a.index[i]
+
+print dict_val
+def get_val(s):
+    c=0
+    for i in s:
+        c=c+ dict_val[i]
+    return c
+output=open('~/Python/output.txt','a')
+dict=open('/usr/share/dict/words','r')
+for line in dict:
+    m=get_val(line)
+    if m==100:
+        output.append(line)
+ 
+        

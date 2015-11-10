@@ -1,0 +1,16 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx 2> ~/.xsession-errors
+
+setxkbmap -option ctrl:nocaps
+function mp3 {
+    arg=$(youtube-mp3 $1 | tee /dev/tty)
+    echo
+    echo "********************************************"
+    echo `echo $arg |grep `
+    echo
+    ffmpeg -i $arg `echo $arg |sed 's:\.m4a:\.mp3:'`
+}

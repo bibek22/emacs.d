@@ -1,0 +1,52 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<x-color><param>dodger blue</param>* Black box abstraction</x-color>
+
+  Internals of the code shouldn't matter. You takes some
+
+  piece of code as a module and work with it with few assumptions
+
+
+  * Primitive objects
+
+    Means of combination
+
+    Means of abstraction
+
+    Capturing common pattern.
+
+
+<x-color><param>dodger blue</param>* For each computer languages:</x-color>
+
+  What are:
+
+  primitive elements.
+
+  Means of combination.
+
+  Means of abstraction.
+
+
+<x-color><param>dodger blue</param>* LISP</x-color>
+
+  uses what is called prefix notation:
+
+  operator written at the far left and parenthesis.
+
+  followed by operands which themselves can be some combinations.
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+ 

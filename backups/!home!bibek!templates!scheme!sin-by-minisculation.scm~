@@ -1,0 +1,13 @@
+(define (third n)
+  (/ n 3))
+(define (cube n)
+  (* n n n))
+(define (sin-rec x)
+  (define (a x)
+    (* 3 (sin-rec (third x))))
+  (define (b x)
+    (let ((t (* 3 (sin-rec (third x)))))
+      (* t t t)))
+  (if (< x 0.1)
+      x
+      (+ ()))) 

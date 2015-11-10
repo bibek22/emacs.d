@@ -1,0 +1,45 @@
+[^\/\]
+
+ [cars?] this matches car or cars.
+ [5*] mathces the phone numbers with 5 55 555 5555 55555 or so in it.
+
+ /\d+ (-|\s)? \d+ (-|)? \d+/    matches 555555555 555-555-555 555 555 555
+
+
+
+ Reluctant or non-greedy and Greedy quantifiers.
+ ***********************************************
+
+ when using the non specific quantifiers like ? * + , the regex could sometime find places where two versions of the match are possible and are overlapped. eg.
+
+ /".+"/ when applied over [English "Hello", Spanish "Hola"] could match either of:
+
+ "Hello" and "Hello", Spanish "Hola"
+
+ By default the result shows the later which is greedy or verbose.
+
+ But one can set the behaviour to non-greedy or reluctant by adding a ? character after the quantifier as such:
+
+ ?? or *? or +?
+
+
+********************************************
+
+Boundary Matchers
+*****************
+
+Aka anchors:
+
+^ (carot) matches at the begining of the line
+$ dollar  matches at the end	  of the line
+
+and also the boundary
+/b word boundary. meaning the character following this exp. should not be preceded by any word character.
+
+
+
+** Escaping \ in python.
+   Since python reserves \ as escape character, you have to type \\ for each \ character into the re code.
+   so, to search for the \ in the string, you have to type four \ characters. as:
+   \\\\ first two for \ into re and same goes for the later two which then combined refers to a \ character
+   in the string to be matched.

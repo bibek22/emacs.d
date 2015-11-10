@@ -1,0 +1,6 @@
+
+(define (exp b n)
+  (define (square n)
+    (* n n))
+  (if (not (= n 1))
+      ))

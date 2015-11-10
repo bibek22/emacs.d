@@ -1,0 +1,46 @@
+alias dict="sdcv"
+alias dictm="sdcv -u dictd_www.dict.org_gcide"
+alias dictc="sdcv -u 'Free On-Line Dictionary of Computing'"
+alias dictl="sdcv -u 'GNU/Linux English-English Dictionary'"
+alias install="sudo apt-get install"
+alias ec="emacsclient"
+alias update="sudo apt-get update"
+alias cd..="cd .."
+alias pdf="zathura"
+alias play="nohup audacious"
+alias find="find -iname"
+alias run="nohup gnome-open"
+alias audacious="audacious -q"
+alias myemacs="nohup emacs -q --load "/home/bibek/.emacs.d.myown/init.el""
+alias edwin="mit-scheme --edit"
+alias scm="scheme"
+
+# xprop to get the property of x
+
+alias xp='xprop | egrep "^WM_(CLASS|NAME)"'
+
+#aliases for youtube-dl
+alias youtube-mp3="youtube-dl -f 140"
+alias c="xclip -selection c"
+
+alias hidden="cd ubuntu/home/bibek/Videos/New\ folder/Friends\ Season\ 2\ COMPLETE.720p.BRrip.sujaidr\ \(pimprg\)/english\ subtitles/nth/"
+alias vol="pactl list sinks | egrep -E \"left:\" |tail -1 | egrep -Eo \"[0-9]{1,3}%\"| tail -1"
+alias mpedit="audacity"
+alias audacity="env PULSE_LATENCY_MSEC=300 nohup audacity"
+alias obr="openbox --reconfigure"
+
+# systemctl power/sleep functions
+alias suspend="systemctl suspend"
+alias Suspend="systemctl hybrid-sleep"
+
+alias chrome="google-chrome-stable"
+
+# mount sdcard
+alias sdcard="sudo mount -o umask=0,uid=nobody,gid=nobody /dev/mmcblk0p1 /home/bibek/device;"
+
+# Battery status
+alias bat="acpi -b"
+
+alias lsorphans='pacman -Qdt'
+alias rmorphans='sudo pacman -Rs $(pacman -Qtdq)'
+alias pcounter='pacman -Q|wc -l'

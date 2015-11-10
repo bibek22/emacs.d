@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PVL=`pactl list sinks | grep Volume:\ fron | egrep -Eo ":.[0-9]*./" |tail -1 | egrep -Eo "[0-9]*"`
+NVL=$(($PVL+500))
+echo $NVL
+pactl set-sink-volume `pacmd list-sinks | grep "index" |grep -Eo '[0-9]{1,4}'|tail -1 ` $NVL

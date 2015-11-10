@@ -1,0 +1,3 @@
+options snd-hda-intel index=1,0
+
+

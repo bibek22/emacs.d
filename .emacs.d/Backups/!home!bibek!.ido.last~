@@ -1,0 +1,114 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/bibek/Notes/Economics/" . "Mit/")
+ ("/home/bibek/Music/" . "Stocks/")
+ ("/home/bibek/Notes/Notes/" . "Economics/")
+ ("/home/bibek/Notes/" . "Economics/")
+ ("/home/bibek/.emacs.d.myown/" . "settings/")
+ ("/media/bibek/Ubuntu/home/bibek/" . ".emacs.d.myown/")
+ ("/media/bibek/Ubuntu/home/" . "bibek/")
+ ("/media/bibek/Ubuntu/" . "home/")
+ ("/media/bibek/" . "Ubuntu/")
+ ("/media/" . "bibek/")
+ ("/home/bibek/.emacs.d/" . "settings/")
+ ("/home/bibek/" . ".emacs.d.myown/")
+ ("/home/" . "bibek/")
+ ("/etc/apt/" . "sources.list.d/")
+ ("/etc/" . "apt/")
+ ("/" . "media/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/bibek/Notes/Economics/Mit/"
+ "/home/bibek/Music/Stocks/"
+ "/home/bibek/Music/"
+ "/home/bibek/Videos/"
+ "/home/bibek/Notes/Notes/Economics/"
+ "/home/bibek/.emacs.d/settings/"
+ "/home/bibek/.emacs.d/"
+ "/home/bibek/.emacs.d.myown/settings/"
+ "/home/bibek/.emacs.d.myown/"
+ "/media/bibek/Ubuntu/home/bibek/.emacs.d.myown/"
+ "/home/bibek/"
+ "/etc/apt/sources.list.d/"
+ "/etc/apt/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "notes.org"
+ "summaries.org"
+ "setup-package.el"
+ "init.el"
+ "zoom-frm.el"
+ ".bashrc"
+ "key-bindings.el"
+ "official-package-repositories.list"
+ "official-source-repositories.list"
+ "google.list"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/bibek/.emacs.d.myown/" (21955 1185 52365 841000) "backups/" "Backups/" "init.el~" "elpa/" "session.10b3271f7eac78b5b3143696314794870500000011740051" "themes/" "ac-comphist.dat" "custom.el" ".emacs.d.backup/" "history" "ido.last" "tramp" "nohup.out" "abbrev_defs" "session.103fdbfab9e1ff2c6514369624687373200000013220051" "session.103bd09227ce76fd75143194125865978700000010260052" "recentf" "%backup%~" "../" "eproject.lst" "url/" "site-lisp.temp/" "eshell/" "init.el" "ido.last~" "./" ".places" "settings/" "auto-save-list/" "session.10cedaa910db950736143696153145662700000014070051")
+
+ ("/home/bibek/.emacs.d/" (21954 14985 8645 166000) ".mc-lists.el" "backups/" "elpa/" "themes/" "ac-comphist.dat" "custom.el" "project-archetypes/" "README.md" "snippets/" ".git/" "history" "ido.last" "tramp" "nohup.out" "abbrev_defs" ".gitmodules" "recentf" "../" "var/" "users/" "eproject.lst" ".gitignore" "site-lisp/" "init.el" "defuns/" "./" ".places" "settings/" "auto-save-list/")
+
+ ("/home/bibek/" (21955 1185 8365 839000) ".Xauthority" "emacs-24.5.tar.gz" "ffmpeg_build/" ".themes/" "ffmpeg_sources/" ".cinnamon/" ".bash_history" "Desktop/" "ffmpeg-2.6.2.tar.bz2" "Music/" ".audacity-data/" ".gnome2/" "Sanjana Shrestha ft. Kamal Khatri - Sunaulo Bihani Ma.mp3" ".gconf/" ".arista/" ".dmrc" "emacs-24.5.tar.gz.1" ".bashrc" "'DJ' FULL VIDEO Song _ Hey Bro _ Sunidhi Chauhan, Feat. Ali Zafar _ Ganesh Acharya _ T-Series-UluRWa19faw.mp4" ".dbus/" ".linuxmint/" "blackboard-theme.el" "Public/" "Beats, Breaks & Scratches Volume  5-enpJ8D5qXAM.m4a" "Downloads/" ".gnome/" ".gksu.lock" "bin/" ".bash_logout" "nohup.out" "bash.sh" "codes/" ".emacs.d.myown/" ".ICEauthority" ".adobe/" "Pictures/" "K'NAAN - Wavin' Flag (Coca-Cola Celebration Mix)-WTJSt4wP2ME.mp4" "Documents/" ".mozilla/" ".bashrc~" "Videos/" ".pki/" "blackboard-theme/" ".ido.last" ".gstreamer-0.10/" ".macromedia/" "../" "Shiva Pariyar new song 2014 rupauli rani- SHIVA PARIYAR Official-Q5cQn33nYIo.mp4" ".ido.last~" "Project/" "Templates/" ".xsession-errors" ".config/" "emacs-24.5/" ".emacs.d/" ".xinputrc" ".profile" ".icons/" "Notes/" ".local/" ".recentf" "emacs-for-python/" ".gnome2_private/" "./" "Calibre Library/" "The Hangover Soundtrack- Iko Iko-pvJKsG7Npuc.mp4" ".smex-items" ".cache/")
+
+ ("/home/bibek/Notes/Economics/Mit/" (21953 59076 26366 773000) "../" "notes.org" "./")
+
+ ("/home/bibek/Notes/Economics/" (21953 59075 994366 773000) "Terms and Definitions.txt" "principles.txt" "nohup.out" "summaries.org" "principles.txt~" "../" "./" "Mit/")
+
+ ("/home/bibek/Notes/" (21954 592 618450 173000) "Hisory/" "Economics/" "Python/" "Psychology/" "Python notes.org" "org/" "practice.org" "Computing/" "terms.txt" "../" "Reviews/" ".#books_on_list.org" "Novels/" "Project/" "RGCTOI~Z/" "To-read-list.org" "Notes From Steve Kingś on Writing" "#From_ThinkingFastandSlow.txt#" "./")
+
+ ("/home/bibek/Music/Stocks/" (21954 1748 964010 619000) "another drums abit faster.wma" "Bollywood_HauHau.mp3" "sonic shock.mp3" "../" "Dhun Tak Da Dhun Dhun Tak.mp3" "racing loop idk.mp3" "It's my beat.mp3" "Drums and Beats.mp3" "Drums and something, not exactly hiphop.mp3" "Beats and scratches.mp3" "longer background maybe.mp3" "Yo al' redy for dis.mp3" "./")
+
+ ("/home/bibek/Music/" (21954 7 578443 255000) "Shiva Pariyar new song 2014 rupauli rani- SHIVA PARIYAR.mp3" "Mixed yesterday.mp3" "Gajalu ti thula thula aankha - Gulam Ali ( with lyrics)-D01thm_Zmsc.mp3" "Hindi remix song 2015 January ☼ Nonstop Dance Party DJ Mix No.9.2. HD-y5wECOdQR5g.f133.mp4.part" "Hindi remix song 2014 August Nonstop Dance Party DJ Mix No.9.2. HD.mp3" "Eminem- Guts over fear ft. Sia" "Game Of Thrones 'Official' Show Open (HBO).m4a" "Who let the Dogs out (Hangover version)-1sykz6YHI6E.mp3" "Eminem - Rap God (Explicit) - YouTube720p.mp3" "Dj-Hey Bro_ Sunidhi chauhan.mp3" "Music/" "Tujhse Naraz Nahi Zindagi.mp3" "Dance Track.wma" "Ariana Grande - BreakFree Ft. Zedd.m4a" "18 - Lorde - Pure Heroine - Team.m4a" "Anil-dai_data/" "Bishwokarma babaal.mp3" "Hot Club Keri Hilson Beat (Uptempo RnB - Dance Beat) Instrumental 2010.mp3" "Daaru Peeke Dance - Full Audio _ Kuch Kuch Locha Hai.mp3" "The Script - Breakeven - YouTube360p.mp3" "To Bid You Farewell.mp3" "Copied/" "Reason to remember the name.mp3" "John Lennon Stand By Me lyrics-r8D9giyyIeQ.mp3" "Ana Tijoux - Somos Sur (Feat. Shadia Mansour) - YouTube720p.mp3" "nowords the script.mp3" "BAHA MEN Who let the Dogs out (Hangover version)-1sykz6YHI6E.m4a" "Untitled Folder/" "nohup.out" "Mai pyari.mp3" "Thumbs.db" "Jaalma - Lyrical Song - Resham Filili - YouTube720p.mp3" "Bhaag Milkha Bhaag - Farhan Akhtar _ Maston Ka Jhund Lyric-cAAD8boQp_o.m4a" "Nicky Jam - El Perdón  Video Lyric  (Prod. Saga WhiteBlack) - YouTube360p.mp3" "Salsa-edited/" "Jesse &amp; Joy - La De La Mala Suerte (Video Oficial) - YouTube720p.mp3" "Mixed-Anil Dai.mp3" "Anil-dai.aup" "Chittiyaan Kalaiyaan Kanika Kapoor  T-SERIES - YouTube720p.mp3" "Hindi remix song 2015 January ☼ Nonstop Dance Party DJ Mix .m4a" "Who let the dogs out.mp3" "Stocks/" "Bob Marley - Buffalo soldier-S5FCdx7Dn0o.m4a" "beats, breaks and scratches vol. 3   by simon harris-VxqT8q04w2Q.m4a" "Love the way you lie-Rihanna ft. Eminem.mp3" "Pereza - Princesas (Videoclip) - YouTube240p.mp3" "The HangOver Soundtrack - Iko Iko (HD)-blz6xqxXOgs.m4a" "Chaubandi ma-Astha Rawat.mp3" "Dildaara Dildaara (Stand By Me) Full Lyrics - Ra.One-Je3xzx_Axyo.mp3" "Khani Ho Yahmu - Trishna Gurung (Official Video) HD 2014 - YouTube360p.mp3" "Dilli Wali Girlfriend Full HD Video Song Yeh Jawaani Hai Deewani  Ranbir Kapoor, Deepika Padukone - YouTube720p.mp3" "../" "HipHop-Dance.mp3" "Hard Hip-Hop Rap Instrumental_Beat 2015-GtQhz6YMwPg.m4a" "Shakira - Rabiosa (English Version) ft. Pitbull-a5irTX82olg.m4a" "Bow wow Big dreams.mp3" "Voy a comerte - Pereza   ( Aviones ) - YouTube360p.mp3" "Eden xo - The Weekend (Audio) - YouTube360p.mp3" "Resham Firiri  - Kutumba Instrumental-4y2y3CGtDmE.m4a" "14 - Nico & Vinz - Black Star Elephant - Am I Wrong.m4a" "Jeena Jeena  Badlapur  Darshan Raval  Reprised Version  - YouTube720p.mp3" "15 - DJ Snake And Lil Jon - Turn Down For What - Turn Down For What.m4a" "34 - Charli XCX - The Fault In Our Stars - Boom Clap.m4a" "Eminem When I´m Gone (lyrics).mp3" "./" "41 - Clean Bandit - New Eyes - Rather Be.m4a" "Resham Filili - Lyrical Song - Resham Filili - YouTube720p.mp3" "Dil To Bacha Hai Ji .HQ 1080p-DY35pXH9qfo.m4a" "Luis Coronel - Lo Mejor Que Me Ha Pasado - YouTube720p.mp3")
+
+ ("/home/bibek/Videos/" (21952 38234 535830 621000) "../" "./")
+
+ ("/home/bibek/Notes/Notes/Economics/" (21953 59075 994366 773000) "Terms and Definitions.txt" "principles.txt" "nohup.out" "summaries.org" "principles.txt~" "../" "./" "Mit/")
+
+ ("/home/bibek/Notes/Notes/" (21953 59076 530366 779000) "Hisory/" "Economics/" "Python/" "Psychology/" "Python notes.org" "org/" "practice.org" "Computing/" "terms.txt" "../" "Reviews/" "Novels/" "Project/" "RGCTOI~Z/" "To-read-list.org" "Notes From Steve Kingś on Writing" "#From_ThinkingFastandSlow.txt#" "./")
+
+ ("/home/bibek/NEw/" (21953 61876 654399 892000) "Music/" "codes/" "../" "./")
+
+ ("/home/bibek/NEw/codes/" (21953 61893 290400 89000) "Python/" "Git/" "../" "./")
+
+ ("/home/bibek/.emacs.d/settings/" (21953 58720 222362 566000) "setup-clojure-mode.el" "setup-flycheck.el" "setup-skewer.el" "my-misc.el" "setup-paredit.el" "setup-shell.el" "#key-bindings.el#" "setup-rgrep.el" "setup-package.el" "setup-ffip.el" "setup-org.el" "setup-js2-mode.el" "setup-magit.el" "nohup.out" "setup-hippie.el" "setup-markdown-mode.el" "sane-defaults.el" "setup-html-mode.el" "setup-ido.el" "../" "setup-yasnippet.el" "mode-mappings.el" "#mac.el#" "setup-elnode.el" "setup-perspective.el" "setup-dired.el" "appearance.el" "./" "setup-ruby-mode.el" "key-bindings.el")
+
+ ("/home/bibek/.emacs.d.myown/settings/" (21952 55453 302925 511000) "zoom-frm.el" "misc-defuns.el" "nohup.out" "zoom-frm.el~" "setup-ido.el" "../" "edit-server.el" "setup-dired.el" "appearance.el" "./" "key-bindings.el")
+
+ ("/etc/apt/sources.list.d/" (21952 49091 294688 256000) "official-source-repositories.list" "official-package-repositories.list" "google-chrome.list" "getdeb.list" "../" "additional-repositories.list" "./")
+
+ ("/media/bibek/Ubuntu/home/bibek/.emacs.d.myown/" (21952 13331 162675 890000) "site-lisp.temp/" "history" "settings/" "../" ".emacs.d.backup/" "init.el~" "tramp" "Backups/" "elpa/" ".places" "recentf" "session.10cedaa910db950736143696153145662700000014070051" "ac-comphist.dat" "init.el" "%backup%~" "eshell/" "eproject.lst" "./" "session.103bd09227ce76fd75143194125865978700000010260052" "themes/" "ido.last~" "abbrev_defs" "url/" "ido.last" "session.10b3271f7eac78b5b3143696314794870500000011740051" "session.103fdbfab9e1ff2c6514369624687373200000013220051" "custom.el" "auto-save-list/" "backups/" "nohup.out")
+
+ ("/media/bibek/Ubuntu/home/bibek/" (21952 30369 168521 815000) "example-content/" "codes/" ".dmrc" ".gnome2_private/" ".macromedia/" ".adobe/" ".gvfs/" ".gconf/" ".dropbox-dist/" "emacs-for-python/" ".foo.swp" ".edwin" ".compiz/" ".openshot/" ".pki/" ".java/" "Templates/" ".lyx/" ".stellarium/" ".profile" ".Skype/" "Music/" ".bash_logout" ".gnome/" "Dropbox/" ".gksu.lock" ".cache/" ".ViberPC/" ".geeknote/" ".xsession-errors.old" ".' /" ".gphoto/" ".fluxgui.pid" "blackboard-theme.el" ".viminfo" ".goldendict/" ".bash_login" ".audacity-data/" "Downloads/" ".lesshst" ".dropbox/" ".gmerlin/" ".bashrc.swp" ".dbus/" "Documents/" ".config/" ".armagetronad/" ".edwin~" ".swo" "Public/" ".local/" ".xsession-errors" ".gstreamer-0.10/" ".Xmodmap" ".swp" ".apport-ignore.xml" ".mozilla/" "bash.sh" ".#new_one.py" ".mplayer/" "Notes/" ".kde/" ".thunderbird/" ".gitconfig" ".bash_history" ".Xauthority" ".wine/" ".ICEauthority" ".xinitrc" ".#python.py" ".emacs.d.myown/" ".gnome2/" ".gnupg/" ".ssh/" ".sudo_as_admin_successful" ".smex-items" ".bashrc~" ".xdvirc" ".pype/" ".swn" "Pictures/" ".bashrc" "Videos/" ".selected_editor" ".emacs.d/" ".w3m/" ".libquicktime_codecs" "nohup.out" "../" "./")
+
+ ("/media/bibek/Ubuntu/home/" (21938 65252 723378 958000) "../" "bibek/" "./")
+
+ ("/media/bibek/Ubuntu/" (21952 33364 117571 544000) "vmlinuz.old" "cdrom/" "usr/" "boot/" "../" "mnt/" "initrd.img.old" "var/" "bin/" "dev/" "etc/" "0" "vmlinuz" "initrd.img" "tmp/" "sbin/" "./" "lib64/" "srv/" "sys/" "media/" "opt/" "lib/" "lost+found/" "root/" "run/" "home/" "proc/")
+
+ ("/media/bibek/" (21952 44056 942500 513000) "Ubuntu/" "LinuxMint(ext4)/" "TRANSCEND/" "../" "./")
+
+ ("/media/" (21952 38238 717738 778000) "bibek/" "../" "./")
+
+ ("/home/bibek/.emacs.d/backups/" (21952 40193 94356 420000) "!home!bibek!Python!5th.py~" "!home!bibek!Python!more!fibonacci.py~" "!home!bibek!Python!more!fibonacci_improved.py~" "!home!bibek!.emacs.d!elpa!auctex-11.88.6!auctex-autoloads.el~" "!home!bibek!Templates!pythonn.py~" "!home!bibek!Python!decode.py~" "!home!bibek!Python!regex.py~" "!home!bibek!Python!Python!Book!class.py~" "!home!bibek!.emacs.d!elpa!dash-20150704.253!dash-autoloads.el~" "!home!bibek!Python!#5th.py#~" "!home!bibek!Notes!Regular\\Expression!regex.txt~" "!home!bibek!.emacs.d.myown!ido.last~" "!home!bibek!Python!Python!challenge!oxygen.py~" "!home!bibek!Latex!fromtutorials!new.tex~" "!home!bibek!.emacs.d!elpa!ac-math-20141116.1327!ac-math-autoloads.el~" "!home!bibek!Python!Python!challenge!new.py~" "!home!bibek!.emacs.d!elpa!autopair-20140825.427!autopair-autoloads.el~" "!home!bibek!Latex!2nd!5th.tex~" "!home!bibek!Templates!seraching.py~" "!home!bibek!Notes!Economics!summaries.org~" "!home!bibek!Downloads!Zipped!6th.py~" "!home!bibek!.config!autostart!2.sh.desktop~" "!home!bibek!.emacs.d!init.el~" "!home!bibek!HTML!project.html~" "!home!bibek!Python!Python!raiseExceptions.py~" "!home!bibek!.emacs.d!elpa!epl-20150517.433!epl-autoloads.el~" "!home!bibek!new.sh~" "!home!bibek!Notes!Computing!Networking!first.org~" "!home!bibek!Latex!2nd!3rd.tex~" "!home!bibek!.emacs.d!elpa!elpy-20150702.1202!elpy-autoloads.el~" "!home!bibek!.emacs.d!elpa!pkg-info-20150517.443!pkg-info-autoloads.el~" "!home!bibek!Latex!first.tex~" "!home!bibek!.emacs.d!elpa!let-alist-1.0.4!let-alist-autoloads.el~" "!usr!share!lightdm!lightdm.conf.d!50-unity-greeter.conf~" "!home!bibek!Latex!2nd!4th.tex~" "!home!bibek!Latex!2nd!new.tex~" "!home!bibek!percent.py~" "!home!bibek!Videos!Movies!LOTR and Hobbit!LOTR -Fellowship of king!the-lord-of-the-rings-the-return-of-the-king-yify-english.srt~" "!home!bibek!HTML!first.html~" "!etc!apt!sources.list~" "!home!bibek!.config!autostart!emacs.desktop~" "../" "!home!bibek!.emacs.d!recentf~" "!home!bibek!Notes!Economics!summaries.txt~" "!home!bibek!.emacs.d!elpa!math-symbol-lists-20141126.1508!math-symbol-lists-autoloads.el~" "!home!bibek!Lisp!DerekBanas!first.lisp~" "!home!bibek!.emacs.d!ido.last~" "!home!bibek!.bashrc~" "!home!bibek!Python!output.txt~" "!home!bibek!Notes!Computing!Structureand!Abstractions.org~" "!home!bibek!Python!4th.py~" "!home!bibek!.emacs.d!elpa!edit-server-20141231.1358!edit-server-autoloads.el~" "!home!bibek!Notes!Economics!Terms and Definitions.txt~" "!home!bibek!.emacs.d!elpa!flycheck-20150709.1237!flycheck-autoloads.el~" "!home!bibek!Templates!insertion_sort.py~" "./" "!home!bibek!Desktop!Notes!Python notes.org~" "!home!bibek!Templates!debugger.py~" "!home!bibek!.emacs.d.myown!init.el~" "!home!bibek!.emacs.d!elpa!auto-complete-auctex-20140223.958!auto-complete-auctex-autoloads.el~" "!home!bibek!TODO.org~" "!home!bibek!.bash_login~")
+
+ ("/home/bibek/.emacs.d/Backups/" (21952 53763 398862 491000) "!home!bibek!codes!Lisp!scheme!first.scm~" "!home!bibek!.emacs.d.myown!elpa!ido-complete-space-or-hyphen-20130228.208!ido-complete-space-or-hyphen-autoloads.el~" "!home!bibek!codes!Lisp!scheme!second.scm~" "!home!bibek!.emacs.d.myown!ido.last~" "!home!bibek!.emacs.d.myown!elpa!slime-20150718.414!slime-autoloads.el~" "!home!bibek!.emacs.d.myown!elpa!ido-vertical-mode-20150724.2337!ido-vertical-mode-autoloads.el~" "!home!bibek!.emacs.d.myown!elpa!flx-ido-20140821.2033!flx-ido-autoloads.el~" "!home!bibek!codes!Lisp!DerekBanas!second.lisp~" "#!home!bibek!Notes!Computing!Algorithm!Intro.org#" "!home!bibek!Notes!Computing!Networking!first.org~" "!home!bibek!Project!CS-MIT!currilulum~" "!home!bibek!.emacs.d.myown!elpa!dired-details-20130824.1158!dired-details-autoloads.el~" "!home!bibek!.emacs.d.myown!elpa!ido-at-point-20141210.2314!ido-at-point-autoloads.el~" "#!home!bibek!bash.sh#" "!home!bibek!.emacs.d.myown!elpa!ido-ubiquitous-20150630.926!ido-ubiquitous-autoloads.el~" "../" "!home!bibek!.emacs.d.myown!elpa!smooth-scrolling-20131219.2039!smooth-scrolling-autoloads.el~" "!home!bibek!Notes!Computing!Structureand!Abstractions.org~" "!home!bibek!.emacs.d.myown!recentf~" "!home!bibek!.emacs.d.myown!elpa!ido-completing-read+-20150630.926!ido-completing-read+-autoloads.el~" "!home!bibek!.ido.last~" "./" "!home!bibek!.emacs.d.myown!init.el~" "!home!bibek!.emacs.d.myown!elpa!flx-20140921.739!flx-autoloads.el~")
+
+ ("/tmp/" (21952 50347 694735 110000) "icedteaplugin-root-n3z2ej/" "hsperfdata_mdm/" "hsperfdata_bibek/" "tmp6oLfnt.png" ".X0-lock" ".com.google.Chrome.zV7Xzw" "orbit-bibek/" "plugtmp/" "icedteaplugin-mdm-85hWNX/" "tmpBKexAG.png" "pulse-PKdhtXMmr18n/" "../" "tmpCM4_w8" "mintUpdate/" "ssh-C69vr06yA4Ly/" ".X11-unix/" "libgksu-d6mJVP/" "libgksu-CZg9Em/" ".ICE-unix/" "./" "hsperfdata_root/")
+
+ ("/etc/apt/" (21952 48196 814654 899000) "sources.list.d/" "trusted.gpg~" "preferences.d/" "trustdb.gpg" "../" "sources.list.bak" "trusted.gpg" "./" "apt.conf.d/" "trusted.gpg.d/")
+
+ ("/etc/" (21952 44515 862517 627000) "python3/" "services" "adduser.conf" "linuxmint/" "gshadow" "resolvconf/" "apport/" "rcS.d/" "dbus-1/" "chromium-browser/" "environment" "adjtime" "blkid.tab" "ndiswrapper/" "mke2fs.conf" "cupshelpers/" "lsb-release" "logcheck/" "dkms/" "sensors.d/" "brlapi.key" "initramfs-tools/" "acpi/" "console-setup/" "rmt" "ufw/" "hdparm.conf" "pcmcia/" "apg.conf" "apparmor.d/" "usb_modeswitch.d/" "sensors3.conf" "group-" "cron.d/" "usb_modeswitch.conf" "apparmor/" "subuid" "grub.d/" "deluser.conf" "sound/" "rc0.d/" "rc4.d/" "modules-load.d/" "request-key.conf" "crontab" "rc6.d/" "dpkg/" "dm/" "chatscripts/" "X11/" "gdb/" "group" "odbcinst.ini" "systemd/" "kernel-img.conf" "issue" "papersize" "openal/" "insserv.conf.d/" "kernel/" "firefox-3.0/" "nsswitch.conf" "gai.conf" "vtrgb" "cron.monthly/" "rpc" "depmod.d/" "polkit-1/" "mtab" ".pwd.lock" "fstab" "thunderbird/" "rsyslog.conf" "colord.conf" "avahi/" "gnome/" "rc3.d/" "shadow-" "os-release" "rc5.d/" "obex-data-server/" "protocols" "apt/" "skel/" "request-key.d/" "newt/" "mono/" "cracklib/" "fuse.conf" "icedtea-web/" "opt/" "manpath.config" "insserv.conf" "libao.conf" "python2.7/" "upstream-release/" "cron.weekly/" "ld.so.conf.d/" "pm/" "passwd-" "gnome-settings-daemon/" "netscsid.conf" "esound/" "python3.4/" "hosts.allow" "hosts" "ld.so.conf" "iproute2/" "localtime" "fstab.d/" "cups/" "bash_completion" "ifplugd/" "login.defs" "hosts.deny" "libreoffice/" "passwd" "ImageMagick/" "zsh_command_not_found" "brltty/" "alternatives/" "gimp/" "calendar/" "security/" "java-7-openjdk/" "subgid-" "update-motd.d/" "NetworkManager/" "shadow" "brltty.conf" "rc2.d/" "bash.bashrc" "rc.local" "bluetooth/" "perl/" "modprobe.d/" "magic.mime" "udev/" "insserv/" "dictionaries-common/" "pam.conf" "profile.d/" "network/" "ppp/" "rc1.d/" "sysctl.conf" "signond.conf" "dhcp/" "emacs/" "python/" "libnl-3/" "ssl/" "blkid.conf" "lintianrc" "ssh/" "ca-certificates.conf" "firefox/" "sane.d/" "cron.daily/" "mailcap.order" "at-spi2/" "groff/" "host.conf" "timezone" "doc-base/" "legal" "ucf.conf" "vim/" "sudoers" "xml/" "subgid" "modules" "nologin" "gconf/" "dnsmasq.d/" "mime.types" "mtools.conf" "gtk-2.0/" "magic" "wodim.conf" "ld.so.cache" "wildmidi/" "odbc.ini" "debconf.conf" "init/" "inxi.conf" "kbd/" "drirc" "speech-dispatcher/" "locale.alias" "xdg/" "ltrace.conf" "pam.d/" "logrotate.conf" "samba/" "cron.hourly/" "updatedb.conf" "shells" "hp/" "kerneloops.conf" "udisks2/" "wgetrc" "bash_completion.d/" "pulse/" "sudoers.d/" "debian_version" "pki/" "selinux/" "securetty" "inputrc" "networks" "cinnamon/" "ConsoleKit/" "logrotate.d/" "bonobo-activation/" "purple/" "gshadow-" "fonts/" ".java/" "mailcap" "hostname" "ldap/" "lvm/" "default/" "ghostscript/" "nanorc" "emacs24/" "rsyslog.d/" "mdm/" "bindresvport.blacklist" "subuid-" "wpa_supplicant/" "libaudit.conf" "ts.conf" "UPower/" "casper.conf" "apm/" "sysctl.d/" "resolv.conf" "terminfo/" "ODBCDataSources/" "gnome-vfs-2.0/" "gtk-3.0/" "profile" "hddtemp.db" "anacrontab" "init.d/" "sgml/" "libpaper.d/" "pnm2ppa.conf" "upstart-xsessions" "ca-certificates/" "issue.net" "../" "./")
+
+ ("/home/" (21952 35962 309510 628000) "bibek/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

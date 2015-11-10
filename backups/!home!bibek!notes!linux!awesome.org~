@@ -1,0 +1,40 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+* Xte 
+  xautomation generate fake inputs to x window.
+
+* lm-sensors
+
+  sensors detect provided
+
+* i8kfan and .mon
+
+* change language
+
+  locale -a lists all the language available for use by system and apps.
+
+  /etc/locale.gen file has list of languge supports.
+
+  Uncomment any and all language you wanna use.
+
+  and run locale-gen to generate and add language to .conf
+
+
+  and finally to change system language run
+
+  localectl set-locale LANG=en_US.utf8
+
+* date and time got resetted?
+
+  run the following commmand if you're online to get the time update
+
+  timedatectl set-ntp true
+
+* wanna find properties os x window?
+
+  xprop :)
+
+  
+
+

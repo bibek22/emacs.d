@@ -1,0 +1,14 @@
+ libnotify-bin
+
+notify-osd
+xautomation
+xautolock
+alsamixergui
+alsa-utils
+jack
+pulseaudio
+dzen2
+oss4-base
+
+
+@bibek: 

@@ -1,0 +1,6 @@
+lallala#! /bin/bash
+
+clear
+setxkbmap -option ctrl:nocaps
+echo "Done"
+echo ""

@@ -1,0 +1,7 @@
+#!/bin/bash
+BAT_LEVEL=`acpi -b |grep -Eo "[0-9]+%"|grep -Eo "[0-9]+"`
+CRIT=85
+if [ $BAT_LEVEL -le $CRIT ]; then
+    aplay ~/apert.wav &
+    notify-send "Battery-Low!!!" -i /home/bibek/batt.png -u "critical" -t 1200
+fi

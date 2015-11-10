@@ -1,0 +1,10 @@
+(define (count-change amount)
+  (cc amount 5))
+
+(define (cc amount coin-types)
+  (cond ((= amount 0) 1)
+	((or (< amount 0) (= coin-types 0)) 1)
+	(else (+ (
+		  )
+
+(count-change 100)

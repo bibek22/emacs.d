@@ -1,0 +1,30 @@
+;; Object Java/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Java/"
+  :tables
+  (list
+    (semanticdb-table "startingpoint.java"
+      :major-mode 'jde-mode
+      :tags 
+        '( ("startingpoint" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [75 88]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [51 132]))                  
+                :type "class")
+                nil [18 134]))          
+      :file "startingpoint.java"
+      :pointmax 135
+      :fsize 134
+      :lastmodtime '(22023 40133 760112 987000)
+      :unmatched-syntax nil))
+  :file "!home!bibek!Templates!Java!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

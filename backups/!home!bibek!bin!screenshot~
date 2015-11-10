@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+name=screenshot
+if [[ -e ~/pictures/screenshots/$name.png ]] ; then
+    i=0
+    while [[ -e ~/pictures/screenshots/$name-$i.png ]] ; do
+        let i++
+    done
+    name=$name-$i
+fi
+if [ $# -eq 0 ]; then
+   import -window root ~/pictures/screenshots/$name.png
+else
+   import ~/pictures/screenshots/$name.png
+fi

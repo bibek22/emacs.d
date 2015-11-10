@@ -1,0 +1,25 @@
+
+
+import re
+num="82682"
+purl= "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing="
+url=purl+ num
+file_to_open= 'num.txt'
+page=open(file_to_open,'r')
+
+stuff=page.read()
+print stuff
+pattern="[i][s]\s\d*"
+com=re.compile(pattern)
+found=com.findall(stuff)
+print found
+while len(found):
+    number= found[-1]
+    print number
+    num=number[3:]
+    print num
+    url=purl+num
+    page=open(file_to_open,'r')
+    stuff= page.read()
+    print stuff
+    found=com.findall(stuff)

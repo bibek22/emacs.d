@@ -1,0 +1,14 @@
+(print "this")
+
+(define null?
+  (cond ((eq (car l) ()) #t)
+	(else #f)))
+(define firsts (lambda(l)
+  (cond ((null? l) (quote ()))
+	(else (cons (car l) (firsts (cdr l)))))))
+
+(define firsts
+  (lambda (l)
+    (cond
+     ( (null? l) ... )
+     (else ( cons ... (firsts ( cdr l)))))))

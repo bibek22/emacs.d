@@ -1,0 +1,36 @@
+% Created 2015-08-12 Wed 14:56
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{Bibek}
+\date{\today}
+\title{Mynotes}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Interesting limits:}
+\label{sec-1}
+ lim
+x --> inf.  $$(x)^(1/2)((x)^(1/2)+(x-3)^(1/2))$$
+% Emacs 24.5.1 (Org mode 8.2.10)
+\end{document}

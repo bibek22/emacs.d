@@ -1,0 +1,134 @@
+[app] (name=fbrun)
+  [Position]	(UPPERLEFT)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (class=Emacs)
+  [Dimensions]	{59% 44%}
+  [Position]	(LOWERLEFT)	{0% 0%}
+  [Alpha]	{255}
+[end]
+[app] (name=audacious) (class=Audacious)
+  [Dimensions]	{44% 46%}
+  [Deco]	{NORMAL}
+[end]
+[app] (name=gnome-terminal-server) (class=Gnome-terminal)
+  [Head]	{1}
+  [Tab]		{yes}
+  [Deco]	{NORMAL}
+[end]
+[app] (name=zathura) (class=Zathura)
+  [Dimensions]	{50% 100%}
+  [Position]	(UPPERLEFT)	{0% 0%}
+  [Tab]		{yes}
+  [Deco]	{NONE}
+[end]
+[app] (name=pavucontrol) (class=Pavucontrol)
+  [Dimensions]	{52% 48%}
+  [Deco]	{NORMAL}
+[end]
+[app] (name=transmission-gtk) (class=Transmission-gtk) (role=tr-main)
+  [Dimensions]	{44% 46%}
+  [Deco]	{NORMAL}
+[end]
+[app] (name=FBReader) (class=FBReader)
+  [Position]	(UPPERLEFT)	{-2% -10%}
+  [Tab]		{yes}
+[end]
+[app] (name=vlc) (class=Vlc) (role=vlc-main)
+  [Dimensions]	{51% 46%}
+  [Position]	(UPPERLEFT)	{33% 29%}
+  [Tab]		{yes}
+  [Deco]	{NONE}
+  [Layer]	{6}
+[end]
+[app] (name=Edit_with_Emacs_FRAME) (class=Emacs)
+  [Dimensions]	{53% 20%}
+  [Position]	(UPPERLEFT)	{7% 76%}
+  [Close]	{yes}
+[end]
+[app] (name=Eclipse) (class=Eclipse)
+  [Dimensions]	{75% 95%}
+  [Position]	(UPPERLEFT)	{0% 0%}
+  [Deco]	{NONE}
+[end]
+[app] (name=sun-awt-X11-XFramePeer) (class=jetbrains-studio)
+  [Dimensions]	{71% 88%}
+  [Deco]	{NONE}
+[end]
+[app] (name=gpicview) (class=Gpicview)
+  [Deco]	{NONE}
+[end]
+[app] (name=feh) (class=feh)
+  [Deco]	{NONE}
+[end]
+[app] (name=audacity) (class=Audacity)
+  [Dimensions]	{46% 60%}
+  [Position]	(UPPERLEFT)	{26% 23%}
+  [Tab]		{yes}
+[end]
+[app] (name=Conky) (class=Conky)
+  [Dimensions]	{45% 66%}
+  [Position]	(UPPERLEFT)	{-1% 0%}
+  [Deco]	{NONE}
+  [Hidden]	{yes}
+  [Sticky]	{yes}
+  [Layer]	{12}
+  [Close]	{yes}
+  [Alpha]	{255}
+[end]
+[app] (class=wifionky)
+  [Dimensions]	{13% 7%}
+  [Position]	(UPPERLEFT)	{0% 33%}
+  [Deco]	{NONE}
+  [Hidden]	{yes}
+  [Sticky]	{yes}
+  [Layer]	{12}
+  [Close]	{yes}
+  [Alpha]	{255}
+[end]
+[app] (class=audaconky)
+  [Dimensions]	{1% 5%}
+  [Position]	(UPPERLEFT)	{0% 96%}
+  [Deco]	{NONE}
+  [FocusHidden]	{no}
+  [Sticky]	{yes}
+  [Layer]	{10}
+  [Close]	{yes}
+  [Alpha]	{255}
+[end]
+[app] (class=poweronky)
+  [Dimensions]	{13% 7%}
+  [Position]	(UPPERLEFT)	{0% 33%}
+  [Deco]	{NONE}
+  [Hidden]	{yes}
+  [Sticky]	{yes}
+  [Layer]	{12}
+  [Close]	{yes}
+  [Alpha]	{255}
+[end]
+[transient] (name=audacity) (class=Audacity)
+  [Position]	(UPPERLEFT)	{23% 27%}
+  [Deco]	{NORMAL}
+  [Alpha]	{18 255}
+[end]
+[group]  (workspace=[current])
+ [app] (class=Xfce4-terminal) (name=Terminal)
+  [Tab]		{yes}
+[end]
+[app] (name=cairo-dock) (class=Cairo-dock)
+  [Position]	(UPPERLEFT)	{0% 85%}
+  [Layer]	{10}
+  [Alpha]	{0}
+[end]
+[app] (name=desktop_window) (class=Nemo)
+  [Layer]	{15}
+[end]
+[app] (name=Navigator) (class=Firefox) (role=browser)
+  [Deco]	{NONE}
+[end]
+[app] (name=xfce4-appfinder) (class=Xfce4-appfinder)
+  [Position]	(UPPERLEFT)	{0% 0%}
+[end]
+[transient] (name=Dialog) (class=Firefox)
+  [Dimensions]	{41% 26%}
+[end]

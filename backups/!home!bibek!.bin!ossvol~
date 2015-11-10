@@ -1,0 +1,114 @@
+#!/bin/bash
+#
+# ossvol is a simple script to manage oss volume levels and muting.
+#
+# original script by: Daniel J Griffiths <ghost1227@archlinux.us>
+#
+###
+
+# Configure stuff
+VOLSTORE=~/.volume
+CHANNEL="vmix0-outvol"
+ARGUMENT=$2
+
+# dzen stuff
+SECS="1"            # sleep $SECS
+BG="#080808"        # background colour of window
+FG="#ffffff"        # foreground colour of text/icon
+BAR_FG="#ffffff"    # foreground colour of volume bar
+BAR_BG="#080808"    # background colour of volume bar
+XPOS="750"          # horizontal positioning
+YPOS="515"          # vertical positioning
+HEIGHT="50"         # window height
+WIDTH="400"         # window width
+BAR_WIDTH="300"     # width of volume bar
+ICON="$HOME/.icons/dvol/spkr_02.xbm"
+FONT="fixed"
+
+# You shouldn't have to edit below here.
+PIPE="/tmp/volpipe"
+
+errorout() {
+  echo "$1"
+  exit 1
+}
+
+usage() {
+  echo "usage: ossvol [option] [argument]"
+  echo
+  echo "Options:"
+  echo "     -i, --increase - increase volume by [argument]"
+  echo "     -d, --decrease - decrease volume by [argument]"
+  echo "     -t, --toggle   - toggle mute on and off"
+  echo "     -h, --help     - display this"
+  exit 1
+}
+
+toggle() {
+  if [ -f $VOLSTORE ]; then
+    ossmix $CHANNEL `cat $VOLSTORE`
+    rm $VOLSTORE
+  else
+    VOLUME=$(ossmix $CHANNEL | awk '{print $10}' | awk -F : '{print $1}')
+    ossmix $CHANNEL 0
+    echo $VOLUME > $VOLSTORE
+  fi
+}
+
+increase() {
+  if [ -f $VOLSTORE ]; then
+    TMPVOL=`cat $VOLSTORE`
+    NEWVOL=`expr $TMPVOL + $ARGUMENT`
+    ossmix $CHANNEL +$NEWVOL
+    rm $VOLSTORE
+  else
+    ossmix $CHANNEL +$ARGUMENT
+  fi
+}
+
+decrease() {
+  if [ -f $VOLSTORE ]; then
+    TMPVOL=`cat $VOLSTORE`
+    NEWVOL=`expr $TMPVOL - $ARGUMENT`
+    ossmix $CHANNEL -- -$NEWVOL
+    rm $VOLSTORE
+  else
+    ossmix $CHANNEL -- -$ARGUMENT
+  fi
+}
+
+case "$1" in
+  '-i'|'--increase')
+  increase
+  ;;
+  '-d'|'--decrease')
+  decrease
+  ;;
+  '-t'|'--toggle')
+  toggle
+  ;;
+  '-h'|'--help')
+  usage
+  ;;
+  *)
+  errorout "Unrecognized option \`$1', see ossvol --help"
+  ;;
+esac
+
+#
+# dzen approach from bruenig's dvol script added by pbrisbin
+#
+# Using named pipe to determine whether previous call still exists
+# Also prevents multiple volume bar instances
+if [ ! -e "$PIPE" ]; then
+  mkfifo "$PIPE"
+  (dzen2 -tw "$WIDTH" -h "$HEIGHT" -x "$XPOS" -y "$YPOS" -fn "$FONT" -bg "$BG" -fg "$FG" < "$PIPE" 
+  rm -f "$PIPE") &
+fi
+
+# Feed the pipe!
+VOL=$(ossmix $CHANNEL | awk '{print $10}' | cut -d '.' -f 1)
+VOL=$(expr $VOL \* 100 / 25)
+(echo "$VOL" | gdbar -l "^i(${ICON})" -fg "$BAR_FG" -bg "$BAR_BG" -w "$BAR_WIDTH"; sleep "$SECS") >> "$PIPE"
+
+exit 0

@@ -1,0 +1,161 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+Time-stamp: <x-color><param>magenta3</param><<2015-07-22 20:00:28 bibek></x-color>
+
+
+<x-color><param>dodger blue</param>* Networking:</x-color>
+
+  connection between computers/data centers.
+
+
+  Protocol:
+
+  Cable modem:
+
+  Fiber optics cable:
+
+  coaxial cable:
+
+  DSL: Digital subscriber line
+
+  ADSL: Asymetric DSL
+
+  API: Application programming Interface
+
+      Each application that has access to the internet needs to do a set of procedures before
+
+  sending the packages in the internet.
+
+<x-color><param>dodger blue</param>* Network core</x-color>
+
+<x-color><param>#edd400</param>** Packets switching:</x-color>
+
+   communication method in which transmitted data are broken down into
+
+   suitable sized blocks called packets and are sent via a medium that
+
+   may be shared by a multiple communication sessions.
+
+<x-color><param>#6ac214</param>*** Store and forward switching:</x-color>
+
+    The link, like router, doens't send a packet untill it is fully
+
+    received. So, it stores in a buffer and sends it once it is fully
+
+    received.
+
+    <x-color><param>LightSkyBlue</param>| so takes L/R time to recieve a packet and same to send it where</x-color>
+
+    <x-color><param>LightSkyBlue</param>|   L is the length of the packet and R is the connected speed.</x-color>
+
+    Time it takes is
+<x-color><param>#edd400</param>** Circuit switching</x-color>
+
+   In this mode of networking, some number of links that are available
+
+   are used to create a dedicated, say reserved for the session,
+
+   connection aka circuit which can provide guarrented constant speed
+
+   unlike the packet switching methods.
+
+<x-color><param>#6ac214</param>*** Multiplexing in CS network</x-color>
+
+    Multiplexing: Basically the modes of providing services to different
+
+    connections at the same time by a link.
+
+    It occurs in two modes in CS network:
+
+<x-color><param>tomato</param>**** Frequency Division Multiplexing(FDM)</x-color>
+
+     In this mode, the frequency spectrum used by a link is split into
+
+     specific number of dedicated **frequency band** with specific width
+
+     called **Bandwidth** Eg. telephone networks usually have 4kHz
+
+     bandwidth. And these bands are used by different sender/reciever pair.
+
+<x-color><param>tomato</param>**** Time Division Multiplexing(TDM)</x-color>
+
+     In this mode of multiplexing, the connection time is divided into
+
+     specific intervals called **frames** which are further split into
+
+     equal number of even smaller intervals called **slots**.
+
+
+     Specific slots in every frame is dedicated for a particular sender/reciever
+
+     pair.
+
+<x-color><param>#edd400</param>** Network of Networks</x-color>
+
+<x-color><param>#6ac214</param>*** Network structure 1</x-color>
+
+    Access ISPs connected to the main top ISP who owns it all, aka Global Transit
+
+    ISP. Global Transit ISP doens't have to pay anyone. It hosts everything and
+
+    invest in the physical parts of the network.
+
+<x-color><param>#6ac214</param>*** Network structure 2</x-color>
+
+    Since the Global Transit ISP gains profit by providing services, there are
+
+    competitions and many other GT ISPs rise into existence.
+
+    Access ISPs and competiting GT ISPs and tier 1 ISP which are huge on themselves
+
+    and host regional ISPs.
+
+<x-color><param>#6ac214</param>*** Network structure 3</x-color>
+
+    Multiple competiting regional ISPs in a region.
+
+    In some region, regional ISPs may be as large as spanning a whole country.
+
+<x-color><param>#6ac214</param>*** Network structure 4</x-color>
+
+    It adds PoP, multi-homing, peering, Internet Exchange Points(IXP) to network
+
+    structure 3.
+
+<x-color><param>tomato</param>**** Point of Presence(PoP)</x-color>
+
+     This exists at all level of hierarchy except at the base.
+<x-color><param>tomato</param>**** Multi-homing</x-color>
+
+     Costomer ISP at any level can connect to multiple provider ISP to get better
+
+     and uninterrupted connection even when one is down. Called multi homing.
+
+<x-color><param>tomato</param>**** Peering</x-color>
+
+     The ISPs at same level of heirarchy can peer meaning can agree to share
+
+     data among themselves so that they can avoid costs to the upstream levels
+
+     and benefit mutually.
+
+<x-color><param>tomato</param>**** Internet Exchange Points(IXP)</x-color>
+
+     Similar to peering which is a standalone buildings with it's own switches.
+
+     where multiple switches can peer together.
+
+<x-color><param>#6ac214</param>*** Network Structure 5</x-color>
+
+    It builds on the top of structure 4 by adding content provider Networks.
+
+    Google is one of the leading content provider. It hosts data centers around
+
+    the globe each of which can host thousands of servers. All of these are inter-
+
+    connected with google's private TCP/IP Network.
+
+<x-color><param>#edd400</param>** Delay, Loss, Throughput in PSN</x-color>
+
+   1.4

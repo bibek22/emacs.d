@@ -1,0 +1,4 @@
+(define lat?
+  (lambda (l)
+    (cond  (())))
+  )

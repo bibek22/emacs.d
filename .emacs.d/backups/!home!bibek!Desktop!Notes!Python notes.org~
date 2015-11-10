@@ -1,0 +1,28 @@
+Search more about Seek() method in file.
+
+for a exercise:
+
+Things that we've done with files.
+we took .txt files from the user through argument and played with it.
+first we were able to read() it meaning use whatever is in the file in our own code. 
+Next thing, we also read the line() with readline() which basically searches the "\n" characters in the text provided and prints everything upto that character. It does the same with next such character the next time readline() method is called. The informatio of position of readline is contained in the very variable used to open and store the text file.
+
+-Used a method seek() for the text file and what it does isn't something i know particualarly. Have to search on that.
+
+- learnt to use argv in script. import the argv from sys module.
+- also used exists() from os.path module which basically checks if the file user provided actually exists or not.
+
+syntax to open the text file:
+open("file_name", "permission")
+permission being either "w" FOR  writing, "r" or nothing for reading and "w+" for both.
+
+Have to .close() file after messing up with it for the things to be saved successfully.
+
+- truncate() is another method with files that empties the damn file. Deletes every thing.
+- write("things to be written") writes the thing, and only thing (not append) into the file.
+
+
+- have to go to bitbucket.org and search for the python (not python 3) I don't why, though.
+- also to github.com or lauchpad.net and koders.com as well.
+
+- What does the -1 in .pop(-1) do in the location??

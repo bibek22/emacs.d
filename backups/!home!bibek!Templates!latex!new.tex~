@@ -1,0 +1,60 @@
+
+\documentclass[a4paper, 14pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\title{My First Document}
+\author{Joe Bloogs}
+\date{Oct 12}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+This is my first LATEX Docuemnt.
+\section{Method}
+Lorem ipsum dolor sit omet, consetetur adipising elit, sed do eisumod.
+
+
+\section{Results}
+Not finished yet.
+\subsection{data}
+
+\subsection{graphs}
+
+\begin{figure}[h}
+\centering
+\includegraphics[height=3cm, angle=45]{low-battery-icon}
+\label{fig:Lion}
+\end{figure}
+
+
+$ 2+3 = 5$ 
+$$ A_2 + B^3 = C^3$$
+$y \subseq Z$
+\subsection{limitations}
+\footnote{nothing to say}
+\textit{that is awesome!}
+\textbf{For the reason of doing it.}
+\section{Conclusion}
+\subsection{book}
+It doesn not matter whether you 
+enter one or several    spaces after a word. 
+
+An empty line starts a new paragraph.
+
+I read that Knuth divides the people working iwth \TeX{} into
+\TeX{}nicians and \TeX{} perts.
+Today is \today.
+You can \textsl{lean} on me.
+Please start new line right after here \newline Thank you!
+
+
+
+
+
+
+
+\end{document}
+
+
+

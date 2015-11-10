@@ -1,0 +1,19 @@
+;;; -*- coding: utf-8 -*-
+(("/home/bibek/.emacs.d.myown/init.el" . 1179)
+ ("/home/bibek/.emacs.d/ido.last" . 139806)
+ ("/home/bibek/.bashrc" . 8271)
+ ("/home/bibek/emacs-for-python/epy-init.el" . 593)
+ ("/home/bibek/.emacs.d/settings/"
+  (dired-filename . "/home/bibek/.emacs.d/settings/.."))
+ ("/home/bibek/.emacs.d/"
+  (dired-filename . "/home/bibek/.emacs.d/.emacs.d.backup"))
+ ("/home/bibek/.emacs.d/recentf" . 793)
+ ("/home/bibek/Notes/Economics/summaries.org" . 19909)
+ ("/home/bibek/Calibre Library/"
+  (dired-filename . "/home/bibek/Calibre Library/Brian Greene"))
+ ("/home/bibek/.emacs.d/elpa/simple-httpd-20150430.1755/simple-httpd-autoloads.el" . 769)
+ ("/home/bibek/.emacs.d/elpa/yasnippet-20150415.244/yasnippet-autoloads.el" . 1535)
+ ("/home/bibek/.emacs.d/elpa/pkg-info-20150517.443/pkg-info-autoloads.el" . 3756)
+ ("/home/bibek/.emacs.d/elpa/epl-20150517.433/epl-autoloads.el" . 220)
+ ("/home/bibek/.emacs.d/elpa/let-alist-1.0.4/let-alist-autoloads.el" . 1252)
+ ("/home/bibek/.emacs.d/elpa/htmlize-20130207.1202/htmlize-autoloads.el" . 2749))

@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+function show_usage {
+    echo "************************"
+    echo "Usage : $0 [SOURCE_DIR] [TARGET_DIR]"
+    echo "Use -h/--help flag to show this message and exit."
+    echo
+    echo "copy files from SOURCE_DIR to TARGET_DIR updating any duplicate files and remove SOURCE_DIR"
+    exit 1
+}
+if [ $# -ne 2 ];then
+    show_usage
+else
+    if [ -d $1 ];then
+	source_dir=$1
+    else
+	echo "Invalid source directory"
+	show_usage
+    fi
+    if [ -d $2 ]; then
+	target_dir=$2
+    else
+	echo "Invalid target directory"
+	show_usage
+    fi
+    mv $source_dir/* $target_dir
+    rmdir $source_dir
+    exit 0
+fi

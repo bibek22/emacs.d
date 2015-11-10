@@ -1,0 +1,24 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+* Broke the system outa nowhere today
+
+  Someone suggested a way to clean the orphan packages and also some other
+
+  things like pacman-uptimize(?) and I did that.
+
+  Also changed the cursor theme. Also installed some chinese font.
+
+  And when I rebooted, the login screen just wouldn't let me into the graphical
+
+  interface and log me right out.
+
+
+  Turned out one of xorg packages one was apparently deleted in orphan package
+
+  sweep.
+
+
+  After installing that, fluxbox started again. YAY!
+
+  

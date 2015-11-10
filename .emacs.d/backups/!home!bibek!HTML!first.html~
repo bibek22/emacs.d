@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>My Social Network</title>
+	</head>
+	<body>
+		<!--Add your HTML below!-->
+		<div class="friend">BIbek</div>
+		<div class="family">Mom</div>
+		<div class="enemy">rats</div>
+		
+	</body>
+</html>

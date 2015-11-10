@@ -1,0 +1,7 @@
+\documentclass[11pt]{article}
+
+/begin{document}
+This is my first LaTeX document. \\
+Suppose we are given a rectangle with side lengths $(x+1)$ and $(x+3)$.
+\end{document}
+qq

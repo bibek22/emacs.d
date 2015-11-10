@@ -1,0 +1,12 @@
+
+
+* Added spanish layout to keyboard a key combo away.
+
+used setxkbmap and localectl for that.
+localectl list-x11-keymap-models lists keyboard models
+localectl list-x11-keymap-layout for langauge
+localectl list-x11-keymap-variant <language>   for variant of that language
+localectl list-x11-keymap-options for options to choose from
+and use the choosing with setxkbmap
+
+setxkbmap -model dell -layout es -variant mac -option ctrl:nocaps

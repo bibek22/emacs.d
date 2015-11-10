@@ -1,0 +1,187 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+
+
+;; <x-color><param>#AEAEAE</param>Turn off mouse interface early in startup to avoid momentary display
+</x-color>(<x-color><param>#FBDE2D</param>if</x-color> (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(<x-color><param>#FBDE2D</param>if</x-color> (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(<x-color><param>#FBDE2D</param>if</x-color> (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;; <x-color><param>#AEAEAE</param>No splash screen please ... jeez
+</x-color>(setq inhibit-startup-message t)
+(setq user-emacs-directory <x-color><param>#61CE3C</param>"~/.emacs.d.myown/"</x-color>)
+(add-to-list 'load-path (concat user-emacs-directory <x-color><param>#61CE3C</param>"settings"</x-color>))
+
+(setq is-mac 0)
+
+(load-file <x-color><param>#61CE3C</param>"~/emacs-for-python/epy-init.el"</x-color>)
+(add-to-list 'custom-theme-load-path <x-color><param>#61CE3C</param>"/home/bibek/"</x-color>)
+(load-theme 'blackboard t)
+
+
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
+(setq ido-create-new-buffer 'always)
+
+
+(<x-color><param>#FBDE2D</param>when</x-color> (>= emacs-major-version 24)
+  (<x-color><param>#FBDE2D</param>require</x-color> '<x-color><param>#D8FA3C</param>package</x-color>)
+  (add-to-list
+   'package-archives
+   '(<x-color><param>#61CE3C</param>"melpa"</x-color> . <x-color><param>#61CE3C</param>"http://melpa.org/packages/"</x-color>)
+   t)
+  (package-initialize))
+(custom-set-variables
+ ;; <x-color><param>#AEAEAE</param>custom-set-variables was added by Custom.
+</x-color> ;; <x-color><param>#AEAEAE</param>If you edit it by hand, you could mess it up, so be careful.
+</x-color> ;; <x-color><param>#AEAEAE</param>Your init file should contain only one such instance.
+</x-color> ;; <x-color><param>#AEAEAE</param>If there is more than one, they won't work right.
+</x-color> '(inhibit-default-init nil)
+ '(inhibit-startup-screen t)
+ '(org-agenda-files (quote (<x-color><param>#61CE3C</param>"~/org-mode.org"</x-color>))))
+(custom-set-faces
+ ;; <x-color><param>#AEAEAE</param>custom-set-faces was added by Custom.
+</x-color> ;; <x-color><param>#AEAEAE</param>If you edit it by hand, you could mess it up, so be careful.
+</x-color> ;; <x-color><param>#AEAEAE</param>Your init file should contain only one such instance.
+</x-color> ;; <x-color><param>#AEAEAE</param>If there is more than one, they won't work right.
+</x-color> )
+
+
+(fset 'yes-or-no-p 'y-or-n-p) ;<x-color><param>#AEAEAE</param>to replace having to type 'yes' or 'no' and instead type just 'y' or 'n' in prompts.
+
+</x-color>(setq backup-directory-alist '((<x-color><param>#61CE3C</param>"."</x-color> . <x-color><param>#61CE3C</param>"~/.emacs.d/backups"</x-color>))) ;<x-color><param>#AEAEAE</param>don't clutter your working directory and store backups in default directory.
+
+</x-color>;;; <x-color><param>#AEAEAE</param>Shut up compile saves
+</x-color>(setq compilation-ask-about-save nil)
+;;; <x-color><param>#AEAEAE</param>Don't save *anything*
+</x-color>(setq compilation-save-buffers-predicate '(<x-color><param>#FBDE2D</param>lambda</x-color> () nil))
+
+
+;; <x-color><param>#AEAEAE</param>;edit server require (chrome emacs)
+
+</x-color>;; <x-color><param>#AEAEAE</param>(require 'edit-server)
+</x-color>;; <x-color><param>#AEAEAE</param>(edit-server-start)
+
+</x-color>(<x-color><param>#FBDE2D</param>require</x-color> '<x-color><param>#D8FA3C</param>edit-server</x-color>)
+;; <x-color><param>#AEAEAE</param>(edit-server-start)
+
+</x-color>
+
+;<x-color><param>#AEAEAE</param>for auctex
+</x-color>(setq TeX-auto-save t)  
+(setq TeX-parse-self t) 
+
+;<x-color><param>#AEAEAE</param>number lines
+</x-color>;<x-color><param>#AEAEAE</param>(global-linum-mode 1)
+
+</x-color> ;<x-color><param>#AEAEAE</param>scrollbar mode off
+</x-color>(scroll-bar-mode -1)
+
+(global-set-key [f5] 'call-last-kbd-macro) ; <x-color><param>#AEAEAE</param>binding f5 to call-last macro
+
+</x-color>;<x-color><param>#AEAEAE</param>invoke M-x with  C-x C-m or C-c C-m
+</x-color>(global-set-key <x-color><param>#61CE3C</param>"\C-x\C-m"</x-color> 'execute-extended-command)
+(global-set-key <x-color><param>#61CE3C</param>"\C-c\C-m"</x-color> 'execute-extended-command)
+
+;<x-color><param>#AEAEAE</param>for auctex
+</x-color>(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+
+;<x-color><param>#AEAEAE</param>for time-stamp refresh on save
+</x-color>(add-hook 'before-save-hook 'time-stamp)
+
+
+;; <x-color><param>#AEAEAE</param>(defun toggle-fullscreen ()
+</x-color>;;   <x-color><param>#AEAEAE</param>(interactive)
+</x-color>;;   <x-color><param>#AEAEAE</param>(x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+</x-color>;; <x-color><param>#AEAEAE</param>	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+</x-color>;;   <x-color><param>#AEAEAE</param>(x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+</x-color>;; <x-color><param>#AEAEAE</param>	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+</x-color>;; <x-color><param>#AEAEAE</param>)
+</x-color>;<x-color><param>#AEAEAE</param>(toggle-fullscreen)
+</x-color>(global-set-key (kbd <x-color><param>#61CE3C</param>"<<f11>"</x-color>) 'toggle-frame-fullscreen)
+
+
+;; <x-color><param>#AEAEAE</param>;; Make dired less verbose
+</x-color>;; <x-color><param>#AEAEAE</param>(require 'dired-details)
+</x-color>;; <x-color><param>#AEAEAE</param>(setq-default dired-details-hidden-string "--- ")
+</x-color>;; <x-color><param>#AEAEAE</param>(dired-details-install)
+
+</x-color>;; <x-color><param>#AEAEAE</param>Auto refresh buffers
+</x-color>(global-auto-revert-mode 1)
+
+;; <x-color><param>#AEAEAE</param>Also auto refresh dired, but be quiet about it
+</x-color>(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+
+
+;;<x-color><param>#AEAEAE</param>keybindings
+</x-color>(global-set-key (kbd <x-color><param>#61CE3C</param>"C-;"</x-color>) 'other-window)
+
+;;<x-color><param>#AEAEAE</param>hightlight current line.
+
+</x-color>
+
+;; <x-color><param>#AEAEAE</param>Turn on the menu bar for exploring new modes
+</x-color>(global-set-key (kbd <x-color><param>#61CE3C</param>"C-<<f10>"</x-color>) 'menu-bar-mode)
+
+
+;; <x-color><param>#AEAEAE</param>Transpose stuff with M-t
+</x-color>(global-unset-key (kbd <x-color><param>#61CE3C</param>"M-t"</x-color>)) ;; <x-color><param>#AEAEAE</param>which used to be transpose-words
+</x-color>(global-set-key (kbd <x-color><param>#61CE3C</param>"M-t l"</x-color>) 'transpose-lines)
+(global-set-key (kbd <x-color><param>#61CE3C</param>"M-t w"</x-color>) 'transpose-words)
+(global-set-key (kbd <x-color><param>#61CE3C</param>"M-t s"</x-color>) 'transpose-sexps)
+(global-set-key (kbd <x-color><param>#61CE3C</param>"M-t p"</x-color>) 'transpose-params)
+
+
+;; <x-color><param>#AEAEAE</param>Use M-w for copy-line if no active region
+</x-color>;; <x-color><param>#AEAEAE</param>(global-set-key (kbd "M-w") 'save-region-or-current-line)
+</x-color>;; <x-color><param>#AEAEAE</param>(global-set-key (kbd "s-w") 'save-region-or-current-line)
+
+</x-color>
+
+;; <x-color><param>#AEAEAE</param>Make shell more convenient, and suspend-frame less
+</x-color>(global-set-key (kbd <x-color><param>#61CE3C</param>"C-z"</x-color>) 'shell)
+(global-set-key (kbd <x-color><param>#61CE3C</param>"C-x M-z"</x-color>) 'suspend-frame)
+
+
+;;<x-color><param>#AEAEAE</param>kill shell buffer on C-d on empty line
+</x-color>(<x-color><param>#FBDE2D</param>defun</x-color> <x-color><param>#FF6400</param>comint-delchar-or-eof-or-kill-buffer</x-color> (arg)
+  (interactive <x-color><param>#61CE3C</param>"p"</x-color>)
+  (<x-color><param>#FBDE2D</param>if</x-color> (null (get-buffer-process (current-buffer)))
+      (kill-buffer)
+    (comint-delchar-or-maybe-eof arg)))
+
+(add-hook 'shell-mode-hook
+          (<x-color><param>#FBDE2D</param>lambda</x-color> ()
+            (define-key shell-mode-map
+              (kbd <x-color><param>#61CE3C</param>"C-d"</x-color>) 'comint-delchar-or-eof-or-kill-buffer)))
+;;<x-color><param>#AEAEAE</param>blink cursor and more
+</x-color>(<x-color><param>#FBDE2D</param>when</x-color> window-system
+  (setq frame-title-format '(buffer-file-name <x-color><param>#61CE3C</param>"%f"</x-color> (<x-color><param>#61CE3C</param>"%b"</x-color>)))
+  (tooltip-mode -1)
+  (blink-cursor-mode -1))
+
+;; <x-color><param>#AEAEAE</param>Highlight current line
+</x-color>(global-hl-line-mode 1)
+
+
+;; <x-color><param>#AEAEAE</param>Write backup files to own directory
+</x-color>(setq backup-directory-alist
+      `((<x-color><param>#61CE3C</param>"."</x-color> . ,(expand-file-name
+                 (concat user-emacs-directory <x-color><param>#61CE3C</param>"backups"</x-color>)))))
+
+
+;<x-color><param>#AEAEAE</param>(require 'key-bindings)
+</x-color>
+
+;; <x-color><param>#AEAEAE</param>store all backup and autosave files in the tmp dir
+</x-color>(setq backup-directory-alist
+      `((<x-color><param>#61CE3C</param>".*"</x-color> . ,~/.emacs.d.myown/Backups/)))
+(setq auto-save-file-name-transforms
+      `((<x-color><param>#61CE3C</param>".*"</x-color> ,~/.emacs.d.myown/Backups/ t)))
+

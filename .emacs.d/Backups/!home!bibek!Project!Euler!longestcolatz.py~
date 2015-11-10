@@ -1,0 +1,41 @@
+archive = {1: 0}
+
+highest = 1
+limit = 1000001
+
+
+def engine(base, chain=0):
+    global highest
+
+    if base in archive:
+        return archive[base]
+    else:
+        if base % 2 == 0:
+            get = engine(base/2)
+            meaning = 1 + get
+            if meaning > highest:
+                highest = meaning
+            archive[base] = meaning
+            return meaning
+        else:
+            next = 3 * base + 1
+            get = engine(next)
+            meaning = 1 + get
+            if meaning > highest and base <= limit:
+                highest = meaning
+                print 
+            archive[base] = meaning
+            return meaning
+
+
+for number in range(1000001, 500000, -1):
+    if number in archive:
+        pass
+    else:
+        engine(number)
+never = 1
+for each in archive:
+    if archive[each] > never:
+        never = archive[each]
+
+print never

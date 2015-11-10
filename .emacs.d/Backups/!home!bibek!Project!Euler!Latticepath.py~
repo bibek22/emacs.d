@@ -1,0 +1,10 @@
+x = 20
+y = 20
+
+
+def choice(x, y):
+    total = 0
+    for each in range(y):
+        total += choice(x, each)
+    return y + total + (x-1)
+print choice(2, 2)

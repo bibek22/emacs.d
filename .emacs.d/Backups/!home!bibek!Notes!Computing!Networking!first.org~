@@ -1,0 +1,326 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+Time-stamp: <x-color><param>Cyan</param><<2015-08-07 08:38:01 bibek></x-color>
+
+
+* Networking:
+
+  connection between computers/data centers.
+
+
+  Protocol:
+
+  Cable modem:
+
+  Fiber optics cable:
+
+  coaxial cable:
+
+  DSL: Digital subscriber line
+
+  ADSL: Asymetric DSL
+
+  API: Application programming Interface
+
+      Each application that has access to the internet needs to do a set of procedures before
+
+  sending the packages in the internet.
+
+* Network core
+
+** Packets switching:
+
+   communication method in which transmitted data are broken down into
+
+   suitable sized blocks called packets and are sent via a medium that
+
+   may be shared by a multiple communication sessions.
+
+*** Store and forward switching:
+
+    The link, like router, doens't send a packet untill it is fully
+
+    received. So, it stores in a buffer and sends it once it is fully
+
+    received.
+
+    <x-color><param>LightSkyBlue</param>| so takes L/R time to recieve a packet and same to send it where</x-color>
+
+    <x-color><param>LightSkyBlue</param>|   L is the length of the packet and R is the connected speed.</x-color>
+
+    Time it takes is
+** Circuit switching
+
+   In this mode of networking, some number of links that are available
+
+   are used to create a dedicated, say reserved for the session,
+
+   connection aka circuit which can provide guarrented constant speed
+
+   unlike the packet switching methods.
+
+*** Multiplexing in CS network
+
+    Multiplexing: Basically the modes of providing services to different
+
+    connections at the same time by a link.
+
+    It occurs in two modes in CS network:
+
+**** Frequency Division Multiplexing(FDM)
+
+     In this mode, the frequency spectrum used by a link is split into
+
+     specific number of dedicated **frequency band** with specific width
+
+     called **Bandwidth** Eg. telephone networks usually have 4kHz
+
+     bandwidth. And these bands are used by different sender/reciever pair.
+
+**** Time Division Multiplexing(TDM)
+
+     In this mode of multiplexing, the connection time is divided into
+
+     specific intervals called **frames** which are further split into
+
+     equal number of even smaller intervals called **slots**.
+
+
+     Specific slots in every frame is dedicated for a particular sender/reciever
+
+     pair.
+
+** Network of Networks
+
+*** Network structure 1
+
+    Access ISPs connected to the main top ISP who owns it all, aka Global Transit
+
+    ISP. Global Transit ISP doens't have to pay anyone. It hosts everything and
+
+    invest in the physical parts of the network.
+
+*** Network structure 2
+
+    Since the Global Transit ISP gains profit by providing services, there are
+
+    competitions and many other GT ISPs rise into existence.
+
+    Access ISPs and competiting GT ISPs and tier 1 ISP which are huge on themselves
+
+    and host regional ISPs.
+
+<x-color><param>#6ac214</param>*** Network structure 3</x-color>
+
+    Multiple competiting regional ISPs in a region.
+
+    In some region, regional ISPs may be as large as spanning a whole country.
+
+<x-color><param>#6ac214</param>*** Network structure 4</x-color>
+
+    It adds PoP, multi-homing, peering, Internet Exchange Points(IXP) to network
+
+    structure 3.
+
+<x-color><param>tomato</param>**** Point of Presence(PoP)</x-color>
+
+     This exists at all level of hierarchy except at the base.
+<x-color><param>tomato</param>**** Multi-homing</x-color>
+
+     Costomer ISP at any level can connect to multiple provider ISP to get better
+
+     and uninterrupted connection even when one is down. Called multi homing.
+
+<x-color><param>tomato</param>**** Peering</x-color>
+
+     The ISPs at same level of heirarchy can peer meaning can agree to share
+
+     data among themselves so that they can avoid costs to the upstream levels
+
+     and benefit mutually.
+
+<x-color><param>tomato</param>**** Internet Exchange Points(IXP)</x-color>
+
+     Similar to peering which is a standalone buildings with it's own switches.
+
+     where multiple switches can peer together.
+
+*** Network Structure 5
+
+    It builds on the top of structure 4 by adding content provider Networks.
+
+    Google is one of the leading content provider. It hosts data centers around
+
+    the globe each of which can host thousands of servers. All of these are inter-
+
+    connected with google's private TCP/IP Network.
+
+** Delay, Loss, Throughput in PSN
+
+   Packet suffers several types of delay in each node along the path.
+
+   Some of which are Nodal processing delay, queuing delay, transmission
+
+   delay, and propagation delay.
+
+   Together, they accumulate a Total nodal delay.
+
+**** Nodal processing delay
+
+     when the packet arrives at a node. It's header is read and the outbound
+
+     link is processed and directed to the destination. This processing takes
+
+     time callled Nodal processing delay.
+
+**** Queuing delay
+
+     When there is heavy traffic headed to the destination, the packet might
+
+     have to wait before it begins to be transmitted.
+
+**** Transmission delay
+
+     Time it takes to transmit the data. Depends on the speed of the connection.
+
+     L/R
+
+**** Propagation delay
+
+     The time it takes for the bits to arrive at the other node. the speed is
+
+     nearly the speed of light and depends on the phycal medium.
+*** Queing delay and Packet loss
+
+    The router can not host infinite number of packets on the queue so when the
+
+    traffic is crowded, some of the packets are lost.
+
+    The packets that that arrive at the queue only to find that the place is
+
+    full are dropped.
+
+    The lost packets can be retransmitted to deliver the full data.
+*** End-to-End delay
+
+    delay till the data gets transmitted to the destination(the final one).
+
+*** End system application and other delays
+
+    End system or application may delay the packets transmission due to
+
+    shared network as a part of it's transmission protocol for sharing.
+
+    
+
+*** Throughput in computer networks
+
+    The instantaneous transmission rate. For some usage, delay doen't
+
+    matter as much as the instantaneous throughput i.e. to have highest
+
+    of throughput possible.
+
+
+    Bottleneck link may be the throughput in the network.
+
+
+** Layering of Protocol
+
+   Internet protocol stack has five layers.
+*** Application level protocols
+
+    HTTP-for the web pages
+
+    SMTP-for the email packages
+
+    FTP-for transfer of files between two end systems.
+
+    and also
+
+    DNS-for traslation of network address into human readable address
+
+
+    Employed among different application layer end system to exchange
+
+    packages known as message.
+
+
+*** Transport level
+
+    It is to transport the application level pacakges to the application
+
+    end points.
+
+    Two types are :
+
+    TCP: It provides guarantee of delivery of application layer messages
+
+    to the destination and also flow control i.e. sender/receiver speed
+
+    matching.
+
+    
+
+    UDP: It is connectionless  service to its applications. It makes no
+
+    check of reliability, flow control and congestion control.
+
+
+    A transprot level packet is called segment for this discussion.
+*** Network level
+
+    Network layer is responsible for moving Network layer packets aka
+
+    datagrams from one host to another. Transport layer provides the
+
+    trasnport level segment and a destination address. Network layer then
+
+    provides the service of delivering those segments to the transport layer
+
+    in destination host.
+
+
+    IP protocol is widely known network protocol.
+
+    also contains routing protocols which determines what route the packets
+
+    take between server host and destination
+*** Link level
+
+    Protocol to transfer datagrams from one node/router in the route to
+
+    another. Services provided depends on the specific protocol employed.
+
+
+    Ex.
+
+    Ethernet, WiFi, the cable access network's DOCSIS protocol etc.
+
+
+    A packet form source can go though many different kinds of link level
+
+    protocols each of which can provide different types of services.
+
+    Link level packets are called frames.
+*** Physical level
+
+    This is the protocol concerning the howtos of transfering the actual
+
+    bits from one node to another as opposed to the packets in the link level
+
+    protocol.
+
+    Obviously, it can be different depending upon the physical interface
+
+    employed for the data transmission.
+
+    
+
+** Another non-necessary 7 layered model of internet proposed by the ISO back in the 70s
+
+
+** Encapsulation
+
+   

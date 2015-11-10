@@ -1,0 +1,12 @@
+from urllib import *
+import re
+
+url= "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=45439"
+page=urlopen(url)
+
+
+stuff=page.read()
+pattern="[=]/d*"
+
+while len(condition):
+    if 

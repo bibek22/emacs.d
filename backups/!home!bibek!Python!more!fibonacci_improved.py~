@@ -1,0 +1,12 @@
+def fib(x):
+    key=0
+    if x in (0,1):
+        return 1
+    else:
+        while key<=x:
+            first=1
+            second=1
+            nextt=first+second
+            second=nextt
+            key+=1
+            return second

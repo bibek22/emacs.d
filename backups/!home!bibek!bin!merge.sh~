@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+if [ arguement = '-h' or '--help" ]then
+    echo Usage : merge [source] [target]
+

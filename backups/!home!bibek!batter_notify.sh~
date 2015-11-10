@@ -1,0 +1,28 @@
+#!/bin/bash
+CRIT=15
+while true; do
+    # current battery level
+    BAT_LEVEL=`acpi -b |grep -Eo "[0-9]+%"|grep -Eo "[0-9]+"`
+    interval=$((($BAT_LEVEL -$CRIT) * 120)) # loose estimate of backup time for each percentage of battery charge.
+    # Is AC plugged in?
+    state=`acpi -b |grep -Eo "[A-Za-z]+harging"` 
+    #only notify if not Plugged in
+    if [ "$state" = "Discharging" ] ; then
+        # is battery below CRIT level?
+        if [ $BAT_LEVEL -le $CRIT ]; then
+            aplay ~/apert.wav &
+            notify-send "Battery-Low!!!" -i /home/bibek/batt.png -t 900
+            sleep 100
+        else
+            sleep $interval
+        fi
+    else
+        # if plugged in sleep 
+        if [ $BAT_LEVEL -le $CRIT ]; then
+            sleep $interval
+        else
+            # to check if the AC is unplugged before battery gains charge above CRIT.
+            sleep 100
+        fi
+    fi
+done

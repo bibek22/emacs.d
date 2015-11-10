@@ -1,0 +1,18 @@
+# /dev/sda4 LABEL=ElementaryOS
+UUID=f9aef6b7-bce7-4bca-affb-0cf920d04fde	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/sda1
+UUID=9E5B-4733      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+
+# /dev/sda3
+UUID=89cb4aa7-4101-42da-bb03-9b93c042b2ca	none      	swap      	defaults  	0 0
+
+# UUID=f9aef6b7-bce7-4bca-affb-0cf920d04fde LABEL=ElementaryOS
+/dev/sda4           	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# UUID=9E5B-4733
+/dev/sda1           	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+
+# UUID=89cb4aa7-4101-42da-bb03-9b93c042b2ca
+/dev/sda3           	none      	swap      	defaults  	0 0
+

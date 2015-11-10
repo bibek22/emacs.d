@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PVL=
+pacmd set-sink-volume `pacmd list-sinks | grep "index" |grep -Eo '[0-9]{1,4}'|tail -1 ` 60000

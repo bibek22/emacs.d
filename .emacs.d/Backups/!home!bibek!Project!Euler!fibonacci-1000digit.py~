@@ -1,0 +1,10 @@
+last = 1
+sec_last = 0
+def fib():
+    global last
+    global sec_last
+    new = last +sec_last
+    sec_last = last
+    last = new
+    return new
+

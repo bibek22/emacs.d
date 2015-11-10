@@ -1,0 +1,44 @@
+#====================================
+#   Conky Settings
+#====================================
+background yes
+update_interval 1
+double_buffer yes
+no_buffers yes
+
+
+#====================================
+#   Window Specifications
+#====================================
+gap_x 0
+gap_y 0
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+#====================================
+#   Graphics Settings
+#====================================
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+#====================================
+#   Text Settings
+#====================================
+use_xft yes
+xftalpha 0
+xftfont sans serif:size=10
+override_utf8_locale no
+imlib_cache_size 0
+
+TEXT
+# Wifi status
+${image ~/.conky/pictures/wifi.png -p 0,0s -s 42x42}\
+${font roboto:weight=bold:size=12}${color brown}\
+${voffset 34}${goto 22}\
+${wireless_link_qual wlp2s0}
+${font Poiret One}${color green}
+${voffset -55}${goto 58}${downspeed wlp2s0} #speed
